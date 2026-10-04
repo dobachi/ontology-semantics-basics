@@ -4,7 +4,7 @@ PORT  ?= 4455
 PY    ?= python3
 CACHE := $(CURDIR)/.cache
 
-.PHONY: assets html pdf preview preview-fresh preview-stop check-preview validate deck clean
+.PHONY: version assets html pdf preview preview-fresh preview-stop check-preview validate deck clean
 
 # 生成物（図、技術要素の章）を作り直す
 assets:
@@ -58,6 +58,12 @@ validate:
 # 説明ペーパー（pptx）を作る。pptx-build スキルの assets ディレクトリを PPTX_BUILD に指定する
 # （python-pptx と PyYAML が必要）
 PPTX_BUILD ?= $(HOME)/Sources/claude-skills-marketplace/plugins/pptx-build/skills/pptx-build/assets
+# 公開物の版（日付）を変える。VERSION を書き換え、各文書とスライドに反映し、スライドを作り直す。
+#   make version V=2026-11-01
+version:
+	$(PY) scripts/apply_version.py $(V)
+	$(MAKE) deck PY=$(PY)
+
 deck: assets
 	$(PY) deck/build_figures.py
 	cd deck && $(PY) $(PPTX_BUILD)/validate_deck.py deck.yaml | tail -3

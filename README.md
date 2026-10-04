@@ -11,7 +11,19 @@
 | 前提文書（調査の方法と検証の記録） | <https://dobachi.github.io/ontology-semantics-basics/method.html> |
 | リポジトリ | <https://github.com/dobachi/ontology-semantics-basics> |
 
-説明ペーパー（pptx）は、調査報告の冒頭のリンクからダウンロードできる。`main` に push すると、GitHub Actions が HTML を作り直して公開する（`.github/workflows/pages.yml`）。
+説明ペーパー（pptx）は、調査報告の冒頭のリンクからダウンロードできる。ファイル名に版が入る。
+
+## 版
+
+公開物の版は日付で表す。`VERSION` に `YYYY-MM-DD` で書く。同じ日に二度出すときは `.2` のように枝番を付ける。
+
+```bash
+make version V=2026-11-01 PY=<python>   # VERSION を書き換え、文書とスライドに反映する
+```
+
+版は次の場所に出る。調査報告と前提文書の題名の下、調査報告の冒頭の囲み、スライドの表紙、ダウンロードする pptx のファイル名（`ontology-semantics-intro-<版>.pptx`）。公開した版には、同じ名前の Git のタグ（`v<版>`）を付け、GitHub のリリースに pptx を添える。
+
+`main` に push すると、GitHub Actions が HTML を作り直して公開する（`.github/workflows/pages.yml`）。
 
 ## 状態
 
