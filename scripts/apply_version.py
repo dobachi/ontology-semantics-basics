@@ -4,7 +4,7 @@
 版は VERSION に YYYY-MM-DD で書く。同じ日に二度出すときは 2026-10-04.2 のように枝番を付ける。
 このスクリプトは、その値を次の場所に書き込む。
 
-  index.qmd、method.qmd    前書きの date（HTML と PDF の題名の下に出る）
+  index.qmd、method.qmd    前書きの date（題名の下に出る日付。枝番は付かない）と version（版）
   deck/deck.yaml           meta.date と、表紙の date（スライドの表紙に出る）
 
 ダウンロードする pptx のファイル名は、scripts/build_deck_link.py が VERSION を読んで決める。
@@ -29,7 +29,9 @@ def sub(path, pattern, repl, count):
         sys.exit("%s: 書き換える箇所が %d 件見つかるはずが %d 件だった" % (path, count, n))
     open(p, "w", encoding="utf-8").write(new)
 
+# date は日付だけ（枝番を除く）。枝番つきの版は version に入れる
 for doc in ("index.qmd", "method.qmd"):
-    sub(doc, r'^date: .*$', 'date: "%s"' % version, 1)
+    sub(doc, r'^date: .*$', 'date: "%s"' % version[:10], 1)
+    sub(doc, r'^version: .*$', 'version: "%s"' % version, 1)
 sub("deck/deck.yaml", r'^(\s+)date: ".*"$', r'\1date: "%s"' % version, 2)
 print("version:", version)

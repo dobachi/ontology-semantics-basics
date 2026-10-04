@@ -141,3 +141,10 @@ make preview-fresh              # 古い内容のまま直らないときの復�
 - プレビュー稼働中に `make html` や `quarto render` を実行しない。出力先を取り合って失敗する。
 - 編集が反映されたかは `make check-preview` で確かめる。タイムスタンプや HTTP 200 では判定できない。
 - `_elements.qmd` と `figures/*.svg` は生成物である。直接編集せず、生成元を直す。
+
+## ライセンス
+
+- 文書、図、スライド: [CC BY 4.0](LICENSE-docs)
+- スクリプト、例のコード、設定: [Apache License 2.0](LICENSE)
+
+同梱している他者の著作物（Wikimedia Commons の図、文献の書式ファイル）は、それぞれの条件のままである。引用した原文の権利は、各出典の権利者に帰属する。詳しくは `LICENSE-docs` を参照。

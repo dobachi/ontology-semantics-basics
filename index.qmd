@@ -3,6 +3,7 @@ title: "オントロジー・セマンティクス・データモデル標準化
 subtitle: "古典的な研究の系譜から Open Semantic Interchange（Apache Ossie）まで"
 author: "dobachi"
 date: "2026-10-04"
+version: "2026-10-04.2"
 ---
 
 ::: {.callout-note}
@@ -11,7 +12,7 @@ date: "2026-10-04"
 オントロジー、セマンティクス、データモデル標準化という語が何を指すのかを整理した調査報告である。
 事実の記述には出典を付けた。筆者の解釈は「考察」と明示した節と段落に分けて書いた。
 
-この文書は {{< meta date >}} 版である。
+この文書は {{< meta version >}} 版である。本文と図は CC BY 4.0 で公開している（[ライセンス](https://github.com/dobachi/ontology-semantics-basics/blob/main/LICENSE-docs)）。
 
 {{< include _deck_download.qmd >}}
 :::

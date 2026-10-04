@@ -3,6 +3,7 @@ title: "調査の前提と検証の記録"
 subtitle: "「オントロジー・セマンティクス・データモデル標準化の基礎調査」の付属文書"
 author: "dobachi"
 date: "2026-10-04"
+version: "2026-10-04.2"
 ---
 
 ::: {.callout-note}

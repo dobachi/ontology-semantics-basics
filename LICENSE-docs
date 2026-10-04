@@ -1,0 +1,44 @@
+Creative Commons Attribution 4.0 International (CC BY 4.0)
+
+Copyright 2026 Masaru Dobashi
+
+このリポジトリの**文書、図、スライド**は、クリエイティブ・コモンズ 表示 4.0 国際ライセンスの
+下で提供されます。
+
+  https://creativecommons.org/licenses/by/4.0/deed.ja
+  法的条文: https://creativecommons.org/licenses/by/4.0/legalcode.ja
+
+複製・配布・改変・営利利用が可能です。条件は**帰属表示**です。
+表示の例: 「Masaru Dobashi『オントロジー・セマンティクス・データモデル標準化の基礎調査』（版の日付）、CC BY 4.0」
+
+## 対象
+
+| 分類 | 対象 | ライセンス |
+|---|---|---|
+| 文書 | `*.qmd`、`*.md`、公開している HTML と PDF | CC BY 4.0（本ファイル） |
+| 図 | `figures/*.svg`（`figures/ext-*` を除く） | CC BY 4.0（本ファイル） |
+| スライド | `deck/*.pptx`、`deck/deck.yaml`、`deck/template/simple.pptx` | CC BY 4.0（本ファイル） |
+| コード | `*.py`、`*.sh`、`Makefile`、`.github/` 配下、`examples/` の例（`*.ttl`、`*.sql`、`*.json` など） | Apache License 2.0（`LICENSE`） |
+| 設定 | `_quarto.yml` など | Apache License 2.0（`LICENSE`） |
+
+判断に迷うファイルは、コード側（Apache-2.0）として扱ってください。
+
+## 対象外（他者の著作物）
+
+次のものは、それぞれの条件のままです。本ライセンスは及びません。
+
+| ファイル | 権利と条件 |
+|---|---|
+| `figures/ext-wikidata-datamodel.svg`、`figures/ext-wikidata-datamodel.png` | Charlie Kritschmar (WMDE), "Datamodel in Wikidata", Wikimedia Commons。CC0 1.0 |
+| `templates/ieee.csl` | Citation Style Language の書式ファイル。CC BY-SA 3.0（ファイル内の記載による） |
+
+## 引用部分について
+
+文書の中で引用・参照している外部の著作物（標準文書、学術論文、各社の公式文書など）の権利は、
+それぞれの権利者に帰属します。出典台帳（`research/ledger.md`）と検証の記録（`factcheck/`）に
+ある原文の引用も同じです。本ライセンスが及ぶのは、このリポジトリが書いた記述の部分です。
+
+既存の図をもとに描き直した図（意味の三角形、意味の指定の強さによる連続体、欧州相互運用性
+フレームワークの相互運用性モデル、Palantir の航空業界の例）は、描き直した表現について
+本ライセンスを適用します。もとにした図の権利は、それぞれの権利者に帰属します。出典は各図の
+説明に示しています。
