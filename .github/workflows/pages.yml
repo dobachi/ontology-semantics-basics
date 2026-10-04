@@ -1,6 +1,6 @@
 # 調査報告（HTML）を GitHub Pages に公開する。
 # 図（figures/*.svg）、6 章（_elements.qmd）、説明ペーパー（deck/*.pptx）は生成物だが、
-# リポジトリに入れてあるので、ここでは作り直さない。作るのは pptx の埋め込みリンクと HTML だけである。
+# リポジトリに入れてある。ここでは HTML と PDF を作る。PDF は、HTML の「他の形式」のリンク先になる。
 name: Publish to GitHub Pages
 
 on:
@@ -22,11 +22,22 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
+      - name: Install fonts and tools for the PDF
+        run: |
+          sudo apt-get update -qq
+          sudo apt-get install -y -qq fonts-noto-cjk librsvg2-bin ghostscript
+          fc-list | grep -c "Noto Serif CJK JP"
       - uses: quarto-dev/quarto-actions/setup@v2
-      - name: Embed the deck download link
-        run: python3 scripts/build_deck_link.py
+        with:
+          tinytex: true
+      - name: Build the PDFs
+        run: make pdf PY=python3
       - name: Render HTML
         run: quarto render --to html
+      - name: Put the PDFs where the HTML links to them
+        run: |
+          cp pdf/ontology-semantics-basics.pdf _output/index.pdf
+          cp pdf/ontology-semantics-basics-method.pdf _output/method.pdf
       - uses: actions/upload-pages-artifact@v3
         with:
           path: _output

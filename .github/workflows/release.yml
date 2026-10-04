@@ -1,5 +1,5 @@
 # 版のタグ（v<版>）が push されたら、その版のリリースを作る。
-# 添付するのは、その版の調査報告と前提文書の HTML、説明ペーパーの pptx である。
+# 添付するのは、その版の調査報告と前提文書の HTML と PDF、説明ペーパーの pptx である。
 # 説明文は、改変履歴（_changelog.qmd）のその版の行から作る。
 name: Release
 
@@ -25,18 +25,27 @@ jobs:
       - uses: actions/checkout@v4
         with:
           ref: ${{ env.TAG }}
+      - name: Install fonts and tools for the PDF
+        run: |
+          sudo apt-get update -qq
+          sudo apt-get install -y -qq fonts-noto-cjk librsvg2-bin ghostscript
+          fc-list | grep -c "Noto Serif CJK JP"
       - uses: quarto-dev/quarto-actions/setup@v2
+        with:
+          tinytex: true
       - name: Check that the tag matches VERSION
         run: test "v$(cat VERSION)" = "$TAG"
       - name: Build
         run: |
-          python3 scripts/build_deck_link.py
+          make pdf PY=python3
           quarto render --to html
       - name: Collect the versioned files
         run: |
           V=$(cat VERSION); mkdir dist
           cp _output/index.html  "dist/ontology-semantics-basics-$V.html"
           cp _output/method.html "dist/ontology-semantics-basics-method-$V.html"
+          cp pdf/ontology-semantics-basics.pdf "dist/ontology-semantics-basics-$V.pdf"
+          cp pdf/ontology-semantics-basics-method.pdf "dist/ontology-semantics-basics-method-$V.pdf"
           cp deck/ontology-semantics-intro.pptx "dist/ontology-semantics-intro-$V.pptx"
           python3 scripts/release_notes.py > notes.md
       - name: Create or update the release

@@ -26,7 +26,12 @@ pdf: assets
 	cp -r index.qmd method.qmd _elements.qmd _deck_download.qmd _changelog.qmd _quarto.yml _bib figures templates $(PDF_BUILD)/
 	@# 図は先に PDF へ変換し、本文の参照も .pdf に書き換える。quarto に変換を任せると、
 	@# 図の 1 枚が不完全なファイルになってビルドが落ちることがあった
-	cd $(PDF_BUILD) && for f in figures/*.svg; do rsvg-convert -f pdf $$f -o $${f%.svg}.pdf || exit 1; done
+	@# 図の文字は輪郭に変える（gs -dNoOutputFonts）。そのままだと図ごとに書体が埋め込まれ、
+	@# 全体で 30MB 近くになる。輪郭にすると数 MB に収まる。図の中の文字は検索できなくなる
+	cd $(PDF_BUILD) && for f in figures/*.svg; do \
+	  rsvg-convert -f pdf $$f -o $${f%.svg}.raw.pdf || exit 1; \
+	  gs -q -dNOPAUSE -dBATCH -sDEVICE=pdfwrite -dNoOutputFonts -sOutputFile=$${f%.svg}.pdf $${f%.svg}.raw.pdf || exit 1; \
+	  rm -f $${f%.svg}.raw.pdf; done
 	cd $(PDF_BUILD) && sed -i -E 's#\(figures/([A-Za-z0-9_-]+)\.svg\)#(figures/\1.pdf)#g' index.qmd method.qmd _elements.qmd
 	cd $(PDF_BUILD) && XDG_CACHE_HOME=$(PDF_BUILD)/.cache quarto render --to pdf
 	cp $(PDF_BUILD)/_output/index.pdf pdf/ontology-semantics-basics.pdf
