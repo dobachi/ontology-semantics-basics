@@ -136,6 +136,12 @@ M={
 "S-131":("google_okf_intro_2026","McVeety, Sam and Hormati, Amir","2026","6","misc",{}),
 "S-132":("google_okf_v02_2026","McVeety, Sam and Hormati, Amir","2026","7","misc",{}),
 "S-133":("w3c_dwbp_2017","{W3C}","2017","1","techreport",{"institution":"W3C"}),
+"S-134":("omg_cwm_11","{Object Management Group}","2003","3","techreport",{"institution":"OMG","version":"1.1"}),
+"S-135":("jcp_jsr69_jolap","{Java Community Process}","2012","4","misc",{}),
+"S-136":("w3c_data_cube_2014","{W3C}","2014","1","techreport",{"institution":"W3C"}),
+"S-137":("atscale_sml_repo","{AtScale}","2024","8","misc",{}),
+"S-138":("atscale_sml_repo_api","{GitHub}","2024","8","misc",{}),
+"S-139":("atscale_sml_pr_2024","{AtScale}","2024","9","misc",{}),
 }
 T={"S-01":"A Translation Approach to Portable Ontology Specifications","S-02":"Knowledge Engineering: Principles and Methods","S-03":"{CYC}: A Large-Scale Investment in Knowledge Infrastructure","S-04":"The Semantic Web","S-05":"Formal Ontology and Information Systems","S-19":"A Relational Model of Data for Large Shared Data Banks","S-20":"The Entity-Relationship Model---Toward a Unified View of Data","S-46":"Knowledge Graphs","S-73":"Gene Ontology: tool for the unification of biology","S-74":"An Overview of the {KL-ONE} Knowledge Representation System","S-107":"Relational database access system using semantically dynamic objects ({US} Patent 5,555,403)","S-108":"The missing piece of the modern data stack","S-109":"The Semantic Web: Two Decades On","S-110":"Universal semantic layer: Going meta on data, functionality, governance, and semantics","S-112":"Why Open Dataspaces: 設計思想とアーキテクチャパラダイム","S-118":"Proposal: Adopt {JSON} Schema for normative serialization ({DataspaceProtocol} issue 25)","S-119":"The Meaning of Meaning","S-120":"Ontologies and Semantics for Seamless Connectivity","S-121":"Ontologies Come of Age","S-122":"On the Difference between Information Models and Data Models","S-124":"Datamodel in Wikidata ({Wikimedia Commons}, {CC0})"}
 import re

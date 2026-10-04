@@ -67,7 +67,7 @@ make release PY=<python>                # タグを付けて push する。リ�
 | `method.qmd` | 調査の前提と検証の記録（調査方法、出典の区分、検証結果、節と台帳の対応、pptx の構成案） |
 | `_bib/bibliography.bib` | 参考文献（`research/build_bib.py` が生成） |
 | `research/plan.md` | 調査計画（7 つの小問） |
-| `research/ledger.md` | 出典台帳。出典 133 件、主張 210 件、検証結果、推論の一覧 |
+| `research/ledger.md` | 出典台帳。出典 139 件、主張 222 件、検証結果、推論の一覧 |
 | `fact-check-report.md` | ファクトチェック報告書 |
 | `factcheck/` | リンク検査の結果と検証担当ごとの控え |
 | `research/build_ledger.py` | 台帳の正。出典と主張はここを編集する |

@@ -135,6 +135,12 @@ S = [
 ("S-131","Google Cloud Blog, Introducing the Open Knowledge Format (2026-06-12)","https://cloud.google.com/blog/products/data-analytics/how-the-open-knowledge-format-can-improve-data-sharing/","T2","追補"),
 ("S-132","Google Cloud Blog, Open Knowledge format v0.2 tackles agentic trust (2026-07-24)","https://cloud.google.com/blog/products/data-analytics/okf-v0-2-adds-trust-signals","T2","追補"),
 ("S-133","W3C, Data on the Web Best Practices (W3C Recommendation, 2017-01-31)","https://www.w3.org/TR/dwbp/","T1","追補"),
+("S-134","OMG, About the Common Warehouse Metamodel Specification Version 1.1","https://www.omg.org/spec/CWM/1.1/About-CWM","T1","追補"),
+("S-135","Java Community Process, JSR 69: Java OLAP Interface (JOLAP)","https://jcp.org/en/jsr/detail?id=69","T1","追補"),
+("S-136","W3C, The RDF Data Cube Vocabulary (W3C Recommendation, 2014-01-16)","https://www.w3.org/TR/vocab-data-cube/","T1","追補"),
+("S-137","semanticdatalayer/SML, Semantic Modeling Language (GitHub)","https://github.com/semanticdatalayer/SML","T2","追補"),
+("S-138","GitHub API, repository metadata of semanticdatalayer/SML","https://api.github.com/repos/semanticdatalayer/SML","T2","追補"),
+("S-139","AtScale, AtScale Announces the Open-Source Release of SML: A Standard Semantic Modeling Language (2024-09-10)","https://www.atscale.com/press/atscale-announces-the-open-source-release-of-semantic-modeling-language/","T2","追補"),
 ]
 C = [
 # id, claim, source, span, kind
@@ -348,6 +354,18 @@ C = [
 ("C-208","W3C の勧告は、形式的な意味の水準を、データと、最もありそうな用途の両方に合うように選ぶよう勧める","S-133","Opt for a level of formal semantics that fits both data and the most likely applications.","verifiable"),
 ("C-209","W3C の勧告は、複雑な語彙は作るのにも理解するのにも手間がかかり、再利用の妨げになりうると述べる","S-133","such complex vocabularies require more effort to produce and understand","verifiable"),
 ("C-210","W3C の勧告は、共有された語彙、できれば標準化された語彙の用語を使うよう勧める","S-133","Use terms from shared vocabularies, preferably standardized ones, to encode data and metadata.","verifiable"),
+("C-211","CWM は、データウェアハウスのメタデータを、CWM のメタモデルにもとづいて XMI で交換することを提案する仕様である","S-134","This specification proposes that XML Metadata Interchange (XMI) is used to interchange data warehouse metadata based on the CWM metamodel.","verifiable"),
+("C-212","CWM の正式な版として OMG のページに挙がるのは、2003 年 3 月の 1.1 版である","S-134","March 2003","verifiable"),
+("C-213","CWM の開発に貢献した企業に、Hyperion Solutions、IBM、NCR、Oracle、Unisys が挙がる","S-134","Hyperion Solutions","verifiable"),
+("C-214","JOLAP は、OLAP のデータとメタデータの作成と保守を、ベンダに依存しない形で支える Java の API として提案された","S-135","in a vendor-independent manner","verifiable"),
+("C-215","JSR 69（JOLAP）は、仕様の責任者の求めにより取り下げられた","S-135","Withdrawn at the request of the Specification Lead.","verifiable"),
+("C-216","JSR 69（JOLAP）の取り下げは 2012 年 4 月 16 日である","S-135","16 Apr, 2012","verifiable"),
+("C-217","JOLAP は、設計の参照として CWM を挙げている","S-135","Common Warehouse Metamodel (CWM)","verifiable"),
+("C-218","RDF Data Cube 語彙のモデルは、統計データの交換の標準である SDMX のキューブのモデルと互換である","S-136","compatible with the cube model that underlies SDMX","verifiable"),
+("C-219","RDF Data Cube 語彙は、データセットで使うディメンション、属性、メジャーを定義する","S-136","it defines the dimensions, attributes and measures used in the dataset","verifiable"),
+("C-220","AtScale の SML は、Apache ライセンスでオープンソース化されている","S-137","SML is Apache open-sourced","verifiable"),
+("C-221","SML のリポジトリは 2024 年 8 月 26 日に作成された","S-138","2024-08-26T18:17:09Z","verifiable"),
+("C-222","AtScale は 2024 年 9 月 10 日に、SML のオープンソースでの公開を発表した","S-139","announced the open-source release of the Semantic Modeling Language (SML)","verifiable"),
 ]
 esc=lambda s:s.replace("|","\\|")
 out=["# 出典台帳（Source Register / Claim Ledger）","","- 作成日: 2026-10-02（S-86 から S-125 は 2026-10-03、S-126 以降は 2026-10-04 に取得）","- 生成元: `build_ledger.py`（追記のみ。行を消さない）","","## Source Register","","| ID | Source | URL | Tier | Accessed | Retriever |","|---|---|---|---|---|---|"]
