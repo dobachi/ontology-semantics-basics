@@ -1,0 +1,13 @@
+url	title	span	note
+https://www.engineering.upenn.edu/~zives/03f/cis550/codd.pdf	Codd, A Relational Model of Data for Large Shared Data Banks	Volume 13 / Number 6 / June, 1970	T3 mirror; verify via Crossref doi 10.1145/362384.362685
+https://en.wikipedia.org/wiki/Entity%E2%80%93relationship_model	ER model (Wikipedia)	Entity–relationship modeling was developed for database and design by Peter Chen and published in a 1976 paper.	T4; verify via Crossref doi 10.1145/320434.320440
+https://en.wikipedia.org/wiki/ANSI-SPARC_Architecture	ANSI-SPARC Architecture (Wikipedia)	first proposed in 1975	T4
+https://www.dublincore.org/about/history/	DCMI History	At this event, called simply the 'OCLC/NCSA Metadata Workshop', more than 50 people discussed how a core set of semantics for Web-based resources would be extremely useful for categorizing the Web for easier search and retrieval.	T1
+https://www.dublincore.org/specifications/dublin-core/dcmi-terms/	DCMI Metadata Terms	This namespace corresponds to the original scope of ISO 15836, which was published first in 2003 and last revised in 2017 as ISO 15836-1:2017.	T1
+https://www.omg.org/spec/MOF/2.5.1/	MOF 2.5.1	This International Standard provides the basis for metamodel definition in the OMG family of MDA languages and is based on a simplification of the UML2 class modeling capabilities.	T1
+https://www.w3.org/TR/2001/REC-xmlschema-1-20010502/	XML Schema Part 1: Structures	W3C Recommendation 2 May 2001	T1
+https://json-schema.org/overview/what-is-jsonschema	What is JSON Schema?	JSON Schema is a declarative language for defining structure and constraints for JSON data.	T1
+https://schema.org/docs/about.html	About Schema.org	founding companies (Google, Microsoft, Yahoo and Yandex)	T1 fragment; launch date June 2, 2011 only via Wikipedia T4
+https://www.w3.org/TR/2014/REC-vocab-dcat-20140116/	DCAT (2014)	W3C Recommendation 16 January 2014	T1
+https://www.w3.org/TR/vocab-dcat-2/	DCAT 2	W3C Recommendation 04 February 2020	T1
+https://www.w3.org/TR/vocab-dcat-3/	DCAT 3	DCAT is an RDF vocabulary designed to facilitate interoperability between data catalogs published on the Web.	T1; 22 August 2024

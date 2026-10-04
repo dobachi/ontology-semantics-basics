@@ -1,0 +1,17 @@
+@prefix ex:      <https://example.org/> .
+@prefix dcat:    <http://www.w3.org/ns/dcat#> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+
+ex:catalog  a dcat:Catalog ;
+    dcterms:title  "東和精工 データカタログ"@ja ;
+    dcat:dataset   ex:parts-master .
+
+ex:parts-master  a dcat:Dataset ;
+    dcterms:title       "部品マスタ"@ja ;
+    dcterms:conformsTo  ex:PartShape ;
+    dcat:keyword        "部品"@ja , "締結部品"@ja ;
+    dcat:distribution   ex:parts-master-csv .
+
+ex:parts-master-csv  a dcat:Distribution ;
+    dcat:mediaType    <https://www.iana.org/assignments/media-types/text/csv> ;
+    dcat:accessURL    <https://example.org/data/parts> .

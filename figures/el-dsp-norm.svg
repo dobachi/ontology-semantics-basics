@@ -1,0 +1,30 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 760 330" width="760" height="330" role="img" aria-label="規範の置き方の移り変わり" font-family="'Noto Sans CJK JP','Hiragino Sans','Yu Gothic',sans-serif">
+<defs><marker id="a" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="8" markerHeight="8" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#52606d"/></marker></defs>
+<rect width="760" height="330" fill="#ffffff"/>
+<text x="20" y="26" font-size="12.5" fill="#52606d" text-anchor="start">IDSA の先行する別の仕様</text>
+<text x="280" y="26" font-size="12.5" fill="#52606d" text-anchor="start">データスペースプロトコル</text>
+<line x1="255" y1="14" x2="255" y2="232" stroke="#9aa5b1" stroke-width="1.2" stroke-dasharray="5 4"/>
+<rect x="20" y="40" width="210" height="96" rx="8" fill="#e6f5f0" stroke="#009E73" stroke-width="1.5"/>
+<text x="125.0" y="64" font-size="15" fill="#1f2933" text-anchor="middle" font-weight="700">IDS-RAM 4.0</text>
+<text x="125.0" y="86" font-size="13" fill="#52606d" text-anchor="middle">規範: オントロジー</text>
+<text x="125.0" y="105" font-size="13" fill="#52606d" text-anchor="middle">（IDS 語彙）</text>
+<rect x="280" y="40" width="210" height="96" rx="8" fill="#f6f8fa" stroke="#9aa5b1" stroke-width="1.5"/>
+<text x="385.0" y="64" font-size="15" fill="#1f2933" text-anchor="middle" font-weight="700">2024-1 版</text>
+<text x="385.0" y="86" font-size="13" fill="#52606d" text-anchor="middle">必須: JSON-LD のコンパクト形式</text>
+<text x="385.0" y="105" font-size="13" fill="#52606d" text-anchor="middle">スキーマは添付。規範ではない</text>
+<rect x="530" y="40" width="210" height="96" rx="8" fill="#e8f2f9" stroke="#0072B2" stroke-width="1.5"/>
+<text x="635.0" y="64" font-size="15" fill="#1f2933" text-anchor="middle" font-weight="700">2025-1 版</text>
+<text x="635.0" y="86" font-size="13" fill="#52606d" text-anchor="middle">規範: JSON Schema</text>
+<text x="635.0" y="105" font-size="13" fill="#52606d" text-anchor="middle">JSON-LD の処理は任意</text>
+<line x1="494" y1="88" x2="526" y2="88" stroke="#52606d" stroke-width="1.5" marker-end="url(#a)"/>
+<text x="20" y="166" font-size="13" fill="#1f2933" text-anchor="start" font-weight="700">意味の 4 段階でいうと</text>
+<rect x="20" y="180" width="210" height="40" rx="20" fill="#e6f5f0" stroke="#009E73" stroke-width="1.5"/>
+<text x="125.0" y="205" font-size="13" fill="#1f2933" text-anchor="middle">2 段目以上の仕組み</text>
+<rect x="280" y="180" width="210" height="40" rx="20" fill="#f6f8fa" stroke="#9aa5b1" stroke-width="1.5"/>
+<text x="385.0" y="205" font-size="13" fill="#1f2933" text-anchor="middle">2 段目の仕組みが必須</text>
+<rect x="530" y="180" width="210" height="40" rx="20" fill="#e8f2f9" stroke="#0072B2" stroke-width="1.5"/>
+<text x="635.0" y="205" font-size="13" fill="#1f2933" text-anchor="middle">1 段目の検査</text>
+<text x="20" y="262" font-size="12.5" fill="#52606d" text-anchor="start">変わったのは、実装に何を求めるかである。</text>
+<text x="20" y="282" font-size="12.5" fill="#52606d" text-anchor="start">語彙は名前空間として残っており、JSON-LD として処理すれば RDF として扱える。</text>
+<text x="20" y="312" font-size="12.5" fill="#52606d" text-anchor="start">データスペースプロトコルが IDS のオントロジーを基にしたという記述は、見つかっていない。</text>
+</svg>

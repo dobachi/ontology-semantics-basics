@@ -1,0 +1,25 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 760 390" width="760" height="390" role="img" aria-label="AI に意味を渡す二つの方法" font-family="'Noto Sans CJK JP','Hiragino Sans','Yu Gothic',sans-serif">
+<defs><marker id="a" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="8" markerHeight="8" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#52606d"/></marker></defs>
+<rect width="760" height="390" fill="#ffffff"/>
+<rect x="30" y="30" width="320" height="150" rx="8" fill="#f1ebf7" stroke="#7B4EA3" stroke-width="1.5"/>
+<text x="190.0" y="54" font-size="15" fill="#1f2933" text-anchor="middle" font-weight="700">構造化した定義で渡す</text>
+<text x="190.0" y="76" font-size="13" fill="#52606d" text-anchor="middle">Apache Ossie</text>
+<text x="190.0" y="95" font-size="13" fill="#52606d" text-anchor="middle">指標や概念の定義そのものを</text>
+<text x="190.0" y="114" font-size="13" fill="#52606d" text-anchor="middle">決まった形で書く</text>
+<text x="190.0" y="133" font-size="13" fill="#52606d" text-anchor="middle">機械が項目を解釈する</text>
+<rect x="410" y="30" width="320" height="150" rx="8" fill="#fcefe6" stroke="#D55E00" stroke-width="1.5"/>
+<text x="570.0" y="54" font-size="15" fill="#1f2933" text-anchor="middle" font-weight="700">文章のまま渡す</text>
+<text x="570.0" y="76" font-size="13" fill="#52606d" text-anchor="middle">Open Knowledge Format</text>
+<text x="570.0" y="95" font-size="13" fill="#52606d" text-anchor="middle">1 概念を 1 つの Markdown で書く</text>
+<text x="570.0" y="114" font-size="13" fill="#52606d" text-anchor="middle">型、URI、リンクは機械が読める</text>
+<text x="570.0" y="133" font-size="13" fill="#52606d" text-anchor="middle">意味の多くは文章で、言語モデルが解釈する</text>
+<rect x="270" y="250" width="220" height="70" rx="8" fill="#f6f8fa" stroke="#9aa5b1" stroke-width="1.5"/>
+<text x="380.0" y="274" font-size="15" fill="#1f2933" text-anchor="middle" font-weight="700">AI エージェント</text>
+<text x="380.0" y="296" font-size="13" fill="#52606d" text-anchor="middle">同じ定義、同じ文脈で答える</text>
+<line x1="190" y1="182" x2="330" y2="248" stroke="#52606d" stroke-width="1.5" marker-end="url(#a)"/>
+<line x1="570" y1="182" x2="430" y2="248" stroke="#52606d" stroke-width="1.5" marker-end="url(#a)"/>
+<text x="380" y="208" font-size="13" fill="#7B4EA3" text-anchor="middle" font-weight="700">どちらも分析系から出た</text>
+<text x="380" y="228" font-size="12.5" fill="#52606d" text-anchor="middle">違いは、どこまでを構造にするか</text>
+<text x="30" y="360" font-size="13" fill="#52606d" text-anchor="start">Ossie は 2025 年 9 月に OSI として発表、OKF は 2026 年 6 月に発表。</text>
+<text x="30" y="380" font-size="12.5" fill="#52606d" text-anchor="start">二つに分けて見るのは筆者の整理である。</text>
+</svg>

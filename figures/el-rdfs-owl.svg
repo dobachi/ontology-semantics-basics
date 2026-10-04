@@ -1,0 +1,22 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 760 300" width="760" height="300" role="img" aria-label="RDF Schema と OWL の例" font-family="'Noto Sans CJK JP','Hiragino Sans','Yu Gothic',sans-serif">
+<defs><marker id="a" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="8" markerHeight="8" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#52606d"/></marker></defs>
+<rect width="760" height="300" fill="#ffffff"/>
+<rect x="60" y="30" width="180" height="44" rx="8" fill="#e6f5f0" stroke="#009E73" stroke-width="1.5"/>
+<text x="150.0" y="54" font-size="15" fill="#1f2933" text-anchor="middle" font-weight="700">ex:Product</text>
+<rect x="520" y="30" width="180" height="44" rx="8" fill="#e6f5f0" stroke="#009E73" stroke-width="1.5"/>
+<text x="610.0" y="54" font-size="15" fill="#1f2933" text-anchor="middle" font-weight="700">ex:Organization</text>
+<rect x="60" y="130" width="180" height="44" rx="8" fill="#e6f5f0" stroke="#009E73" stroke-width="1.5"/>
+<text x="150.0" y="154" font-size="15" fill="#1f2933" text-anchor="middle" font-weight="700">ex:Part</text>
+<rect x="520" y="130" width="180" height="44" rx="8" fill="#e6f5f0" stroke="#009E73" stroke-width="1.5"/>
+<text x="610.0" y="154" font-size="15" fill="#1f2933" text-anchor="middle" font-weight="700">ex:Supplier</text>
+<line x1="150" y1="130" x2="150" y2="76" stroke="#52606d" stroke-width="1.5" marker-end="url(#a)"/>
+<text x="160" y="108" font-size="13" fill="#1f2933" text-anchor="start">rdfs:subClassOf</text>
+<line x1="610" y1="130" x2="610" y2="76" stroke="#52606d" stroke-width="1.5" marker-end="url(#a)"/>
+<text x="600" y="108" font-size="13" fill="#1f2933" text-anchor="end">rdfs:subClassOf</text>
+<line x1="240" y1="152" x2="520" y2="152" stroke="#52606d" stroke-width="1.5" marker-end="url(#a)"/>
+<text x="380.0" y="144" font-size="13" fill="#1f2933" text-anchor="middle">ex:suppliedBy</text>
+<text x="380" y="172" font-size="12.5" fill="#52606d" text-anchor="middle">domain: Part / range: Supplier</text>
+<rect x="60" y="215" width="640" height="44" rx="8" fill="#fcefe6" stroke="#D55E00" stroke-width="1.5" stroke-dasharray="6 4"/>
+<text x="380" y="243" font-size="14" fill="#1f2933" text-anchor="middle">ex:ProcuredItem ＝ ex:suppliedBy の値に Supplier を 1 つ以上持つもの（OWL）</text>
+<text x="60" y="285" font-size="13" fill="#52606d" text-anchor="start">実線は RDF Schema で書ける範囲。破線は OWL で加える論理的な定義。</text>
+</svg>

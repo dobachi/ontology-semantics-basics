@@ -1,0 +1,770 @@
+# 技術要素の解説 {#sec-elements}
+
+@sec-history の図と年表に出てくる技術要素を、系統ごとに一つずつ説明する。
+
+各項目は次の順に書く。
+
+- **概要**: 何であるか。出典の記述にもとづく。
+- **解く問題**: これがないと何に困るか。
+- **具体例**: 部品と供給者という共通の題材で書いた例。
+- **似たものとの違い**: 混同しやすい相手との比較。
+- **使われている場所**: 採用例。出典で確認できたものだけを書き、確認できなかった項目では省いた。
+- **限界と注意点**: 向かない用途と、よくある誤解。
+
+「解く問題」「似たものとの違い」「限界と注意点」は筆者による解説である。
+具体例は筆者が作成したもので、仕様書からの転載ではない。関係モデル、RDF 系の各言語、JSON Schema、Apache Ossie の例は、処理系または公式のスキーマで検証した。GQL の例だけは検証していない。
+
+題材は一貫して次のものを使う。「六角ボルト M8」という部品（番号 P-100、重量 12 グラム）を、「東和精工」という供給者（番号 S-01）が供給している。
+
+## データベース系 {#sec-el-db}
+
+### 関係モデル {#sec-el-relational}
+
+**概要**
+
+データを表の形で扱うモデルである。1970 年に Codd が論文で提案した [@codd_1970]。
+
+**解く問題**
+
+プログラムごとにばらばらだったデータの持ち方を、表という共通の形にそろえる。データの持ち方を変えても、利用する側のプログラムを書き直さずに済むようにする。
+
+**具体例**
+
+```sql
+CREATE TABLE supplier (
+  supplier_id TEXT PRIMARY KEY,
+  name        TEXT NOT NULL
+);
+CREATE TABLE part (
+  part_id     TEXT PRIMARY KEY,
+  name        TEXT NOT NULL,
+  weight_g    REAL,
+  supplier_id TEXT NOT NULL REFERENCES supplier(supplier_id)
+);
+INSERT INTO supplier VALUES ('S-01', '東和精工');
+INSERT INTO part VALUES ('P-100', '六角ボルト M8', 12, 'S-01');
+
+SELECT part.name, supplier.name
+FROM part JOIN supplier ON part.supplier_id = supplier.supplier_id;
+```
+
+![関係モデルの例。部品の表が供給者の表を参照する。](figures/el-relational.svg){#fig-el-relational width=90%}
+
+**似たものとの違い**
+
+RDF との違いは、意味の置き場所にある。関係モデルでは `supplier_id` という列名が何を意味するかは設計書に書かれ、データ自体には含まれない。RDF では述語が識別子を持ち、その意味を別の文で記述できる。
+
+**使われている場所**
+
+Apache Ossie のセマンティックモデルは、物理的な表やビューを参照するデータセットを単位とする [@ossie_core_spec]。
+
+**限界と注意点**
+
+表の設計は組織ごとに異なる。組織をまたいでデータを突き合わせるには、列の意味についての合意が別に必要になる。
+
+### 実体関連モデル {#sec-el-er}
+
+**概要**
+
+データを、実体とその間の関連として捉えるモデルである。1976 年に Chen が論文で提案し、データの統一的な見方を目指した [@chen_1976]。
+
+**解く問題**
+
+表を作る前に、何を管理し、それらがどう結びつくかを、利用者と設計者が同じ図で確認する。
+
+**具体例**
+
+![実体関連モデルの例。部品と供給者を実体、供給を関連として描く。](figures/el-er.svg){#fig-el-er width=90%}
+
+**似たものとの違い**
+
+関係モデルが実装の形であるのに対し、実体関連モデルは設計の段階の図である。オントロジーと似ているが、推論のための論理的な定義は持たない。
+
+**限界と注意点**
+
+図は人が読むためのものである。図そのものを機械が解釈して推論することは想定していない。
+
+### プロパティグラフと GQL {#sec-el-pg}
+
+**概要**
+
+プロパティグラフは、ノードと辺にプロパティを持たせるグラフのデータモデルである。GQL はその問い合わせ言語で、ISO/IEC 39075:2024 がプロパティグラフのデータ構造と基本操作を定義する [@iso_39075_2024]。
+
+**解く問題**
+
+つながりをたどる問い合わせを、表の結合を何段も重ねずに書く。
+
+**具体例**
+
+```sql
+// ノードと辺に、ラベルとプロパティを直接持たせる
+INSERT (:Part {id: 'P-100', name: '六角ボルト M8', weight_g: 12})
+       -[:SUPPLIED_BY {since: 2021}]->
+       (:Supplier {id: 'S-01', name: '東和精工'})
+
+// 供給者ごとの部品を調べる
+MATCH (p:Part)-[:SUPPLIED_BY]->(s:Supplier)
+RETURN p.name, s.name
+```
+
+この例は処理系で検証していない。
+
+![プロパティグラフの例。辺にもプロパティを持たせられる。](figures/el-property-graph.svg){#fig-el-property-graph width=90%}
+
+**似たものとの違い**
+
+RDF もグラフだが、設計の目的が違う。Neo4j は、プロパティグラフはデータ交換形式ではなくデータベースモデルとして設計されたと説明している [@neo4j_rdf_vs_pg_2024]。これは製品ベンダの説明である。RDF は識別子を Web 全体で一意にし、組織をまたぐ交換を重視する。
+
+**限界と注意点**
+
+ノードや辺の識別子は、ふつう一つのデータベースの中で閉じている。組織をまたいで同じものを指すには、別の取り決めが要る。
+
+## 知識表現系 {#sec-el-kr}
+
+### Cyc {#sec-el-cyc}
+
+**概要**
+
+人間の常識にあたる一般的な概念を、大規模に記述しようとした試みである。Lenat らが 1984 年に着手した [@lenat_1995]。
+
+**解く問題**
+
+プログラムが、人なら当然知っている背景知識を持たないために誤るという問題に、知識を書き下すことで対処しようとした。
+
+**具体例**
+
+![常識の知識を書き下して推論する考え方。筆者が作成した例で、Cyc の実際の記述ではない。](figures/el-cyc.svg){#fig-el-cyc width=90%}
+
+**限界と注意点**
+
+本調査では、Cyc の成果や現在の利用状況は確認していない。歴史上の起点の一つとして挙げた。
+
+### KL-ONE と記述論理 {#sec-el-dl}
+
+**概要**
+
+KL-ONE は知識表現システムの一つで、1985 年に概説論文が出た [@brachman_1985]。記述論理は、OWL の形式的な基礎となる論理を研究する分野である [@w3c_owl_2004]。
+
+**解く問題**
+
+概念の定義を、計算機が矛盾の検出や分類に使える厳密な形で書く。
+
+**具体例**
+
+![記述論理による自動分類。定義とデータから、書かれていない分類を計算で導く。](figures/el-dl.svg){#fig-el-dl width=90%}
+
+OWL の項に、同じ定義を OWL で書いた例がある。
+
+**限界と注意点**
+
+KL-ONE が記述論理の源流の一つであるという見方は広く語られる。本調査では、それを直接述べる一次情報を確認していない。
+
+### 上位オントロジー {#sec-el-upper}
+
+**概要**
+
+空間、時間、物、出来事のような、特定の領域に依存しない一般的な概念を記述するオントロジーである [@guarino_1998]。Basic Formal Ontology（BFO）は、ISO/IEC 21838-2:2021 に収められた上位オントロジーである [@iso_21838_2_2021]。
+
+**解く問題**
+
+分野ごとに作られたオントロジーを、共通の土台の上でつなぐ。
+
+**具体例**
+
+![上位、中位、領域オントロジーの重なり。](figures/el-upper-ontology.svg){#fig-el-upper-ontology width=90%}
+
+Common Core Ontologies は、あらゆる領域に共通する汎用的な用語と関係を定義する中位のオントロジー群である [@cco_readme]。
+
+**似たものとの違い**
+
+領域オントロジーは特定の分野の語彙を扱う。上位オントロジーはその分野を問わない枠組みだけを与える。
+
+**使われている場所**
+
+金融の FIBO、生命科学の Gene Ontology、製造の Industrial Ontologies Foundry など、領域ごとのオントロジーは @sec-domain にまとめた。
+
+**限界と注意点**
+
+すべての領域オントロジーが、特定の上位オントロジーにもとづいて作られているわけではない。上位オントロジーの採用には、抽象的な区分を理解するための学習が必要になる。
+
+### 知識グラフと GraphRAG {#sec-el-kg}
+
+**概要**
+
+知識グラフは、多様で動的かつ大規模なデータ集合を活用する場面で、産業界と学術界の両方から注目されているデータの表現である [@hogan_2021]。Google は 2012 年に、検索の対象を文字列ではなく実世界の事物とその関係とするものとしてナレッジグラフを紹介した [@google_kg_2012]。GraphRAG は、Microsoft Research が 2024 年に紹介した手法である [@msr_graphrag_2024]。
+
+**解く問題**
+
+ばらばらの情報源にある事物を、関係でつないで一つの網として扱う。
+
+**具体例**
+
+![知識グラフと GraphRAG の流れ。](figures/el-knowledge-graph.svg){#fig-el-knowledge-graph width=90%}
+
+**似たものとの違い**
+
+オントロジーが概念と関係の定義であるのに対し、知識グラフは個々の事物とそのつながりを大量に持つデータである。知識グラフの基盤には、RDF もプロパティグラフも使われる [@hogan_2021]。
+
+**限界と注意点**
+
+「知識グラフ」は厳密に定義された規格の名前ではない。製品や文献によって指す範囲が異なる。
+
+## Web 標準系 {#sec-w3c}
+
+W3C が勧告した標準を中心に説明する。全体の一覧は次のとおりである。
+
+| 標準 | 役割 | 勧告日 | 出典 |
+|---|---|---|---|
+| RDF | Web 上で情報を表現する枠組み | 1999-02-22、1.1 は 2014-02-25 | [@w3c_rdf_1999; @w3c_rdf11_2014] |
+| RDF Schema | RDF データのためのデータモデリング語彙 | 1.1 は 2014-02-25 | [@w3c_rdfs_2014] |
+| OWL | 形式的に定義された意味を持つオントロジー言語 | 2004-02-10、OWL 2 第 2 版は 2012-12-11 | [@w3c_owl_2004; @w3c_owl2_2012] |
+| SKOS | 知識組織化体系を共有しリンクする共通データモデル | 2009-08-18 | [@w3c_skos_2009] |
+| SPARQL | RDF の問い合わせ言語 | 2008-01-15、1.1 は 2013-03-21 | [@w3c_sparql_2008; @w3c_sparql11_2013] |
+| SHACL | RDF グラフを条件の集合に照らして検証する言語 | 2017-07-20 | [@w3c_shacl_2017] |
+| JSON-LD | Linked Data を直列化する JSON ベースの形式 | 1.0 は 2014-01-16、1.1 は 2020-07-16 | [@w3c_jsonld_2014; @w3c_jsonld11_2020] |
+| DCAT | データカタログ間の相互運用性のための RDF 語彙 | 2014-01-16、第 2 版は 2020-02-04、第 3 版は 2024-08-22 | [@w3c_dcat_2014; @w3c_dcat2_2020; @w3c_dcat3_2024] |
+
+: W3C の主要標準 {#tbl-w3c}
+
+**考察**
+
+これらは役割で分けると理解しやすいと考えられる。
+RDF は「書き方」、RDF Schema と OWL は「語彙と論理」、SKOS は「用語の階層」、SHACL は「検査」、SPARQL は「問い合わせ」、JSON-LD は「開発者になじむ直列化」、DCAT は「データの目録」である。
+
+### RDF {#sec-el-rdf}
+
+**概要**
+
+Web 上で情報を表現するための枠組みである [@w3c_rdf11_2014]。1999 年の仕様は、RDF をメタデータ処理の基盤と位置づけた [@w3c_rdf_1999]。
+
+**解く問題**
+
+出どころの違う情報を、変換の取り決めなしに一つに合わせる。そのために、すべてを同じ 3 つ組の形で書き、識別子を Web 全体で一意にする。
+
+**具体例**
+
+```turtle
+@prefix ex:  <https://example.org/> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+ex:P-100  a              ex:Part ;
+          ex:name        "六角ボルト M8" ;
+          ex:weightGram  12 ;
+          ex:suppliedBy  ex:S-01 .
+
+ex:S-01   a        ex:Supplier ;
+          ex:name  "東和精工" .
+```
+
+![RDF のトリプルの例。](figures/el-rdf.svg){#fig-el-rdf width=90%}
+
+**似たものとの違い**
+
+JSON や XML は入れ子の木の形でデータを持つ。RDF は 3 つ組の集まりであり、順序や入れ子に意味がない。そのため、別々に書かれた RDF をそのまま足し合わせられる。
+
+**使われている場所**
+
+Gaia-X のクレデンシャルはクレームを RDF で表現する [@gaiax_arch_2404]。日本の ODS のメタデータエクスチェンジ仕様は、メタデータを RDF で表現することを求める [@ods_odp_metadata_exchange]。
+
+**限界と注意点**
+
+RDF は書き方を決めるだけである。どの述語を使うかという語彙は、別に決めなければならない。
+
+### RDF Schema {#sec-el-rdfs}
+
+**概要**
+
+RDF データのためのデータモデリング語彙を提供する [@w3c_rdfs_2014]。
+
+**解く問題**
+
+RDF で使うクラスとプロパティについて、上下関係と、主語や目的語になるものの種類を宣言する。
+
+**具体例**
+
+```turtle
+@prefix ex:   <https://example.org/> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+
+ex:Part      a rdfs:Class ; rdfs:subClassOf ex:Product .
+ex:Supplier  a rdfs:Class ; rdfs:subClassOf ex:Organization .
+
+ex:suppliedBy  a <http://www.w3.org/1999/02/22-rdf-syntax-ns#Property> ;
+               rdfs:label   "供給者"@ja ;
+               rdfs:domain  ex:Part ;
+               rdfs:range   ex:Supplier .
+```
+
+![RDF Schema による推論。宣言から、書かれていない型を補う。](figures/el-rdfs.svg){#fig-el-rdfs width=90%}
+
+**似たものとの違い**
+
+データベースのスキーマは、合わないデータを拒否する。RDF Schema の宣言は拒否のためのものではなく、推論の手がかりである。上の例では、`ex:suppliedBy` の主語になったものは部品だと推論される。
+
+**使われている場所**
+
+IDS インフォメーションモデルは RDFS と OWL で書かれたオントロジーである [@ids_infomodel_readme]。
+
+**限界と注意点**
+
+データの誤りを検査する用途には向かない。検査には SHACL を使う。
+
+### OWL {#sec-el-owl}
+
+**概要**
+
+形式的に定義された意味を持つ、セマンティックウェブのためのオントロジー言語である [@w3c_owl2_2012]。情報を人に見せるだけでなく、その内容を処理するアプリケーションのために設計された [@w3c_owl_2004]。
+
+**解く問題**
+
+「供給者を持つものを調達品と呼ぶ」のような定義を、計算機が推論に使える形で書けるようにする。
+
+**具体例**
+
+```turtle
+@prefix ex:   <https://example.org/> .
+@prefix owl:  <http://www.w3.org/2002/07/owl#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+
+ex:suppliedBy  a owl:ObjectProperty ;
+               owl:inverseOf  ex:supplies .
+
+# 「供給者が 1 つ以上あるもの」を「調達品」と定義する
+ex:ProcuredItem  a owl:Class ;
+    owl:equivalentClass [
+        a owl:Restriction ;
+        owl:onProperty      ex:suppliedBy ;
+        owl:someValuesFrom  ex:Supplier
+    ] .
+
+# 部品と供給者は重ならない
+ex:Part  owl:disjointWith  ex:Supplier .
+```
+
+![RDF Schema と OWL の例。](figures/el-rdfs-owl.svg){#fig-el-rdfs-owl width=90%}
+
+**似たものとの違い**
+
+SHACL との違いは、前提にある。OWL は、書かれていないことを「偽」ではなく「未知」と扱う。この考え方を開世界仮説と呼ぶ [@ods_ram_glossary]。供給者の記載がない部品を見ても、OWL は誤りとは判定しない。
+
+**使われている場所**
+
+金融業界の FIBO は OWL で開発されている [@edmc_fibo]。
+
+**限界と注意点**
+
+OWL で「部品には供給者が必ずある」と書いても、供給者のない部品のデータは誤りとして検出されない。
+
+### SPARQL {#sec-el-sparql}
+
+**概要**
+
+RDF のための問い合わせ言語である [@w3c_sparql_2008]。SPARQL 1.1 は、RDF グラフの内容を問い合わせ、操作するための仕様群である [@w3c_sparql11_2013]。
+
+**解く問題**
+
+3 つ組の集まりから、条件に合う部分を取り出す。
+
+**具体例**
+
+```sparql
+PREFIX ex: <https://example.org/>
+
+SELECT ?partName ?supplierName
+WHERE {
+  ?part      a              ex:Part ;
+             ex:name        ?partName ;
+             ex:suppliedBy  ?supplier .
+  ?supplier  ex:name        ?supplierName .
+}
+```
+
+![SPARQL の問い合わせの流れ。](figures/el-sparql.svg){#fig-el-sparql width=90%}
+
+**似たものとの違い**
+
+SQL が表の行を対象にするのに対し、SPARQL はグラフのパターンを対象にする。
+
+**使われている場所**
+
+日本の ODS のメタデータエクスチェンジ仕様は、メタデータの取得手段の一つに SPARQL を挙げる [@ods_odp_metadata_exchange]。
+
+**限界と注意点**
+
+問い合わせを書くには、対象のデータがどの語彙で書かれているかを知っている必要がある。
+
+### SKOS {#sec-el-skos}
+
+**概要**
+
+知識組織化体系を Web 上で共有し、リンクするための共通データモデルである [@w3c_skos_2009]。
+
+**解く問題**
+
+分類表や用語集のような、用語の階層と言い換えを、機械が読める形で共有する。
+
+**具体例**
+
+```turtle
+@prefix ex:   <https://example.org/term/> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+
+ex:fastener  a skos:Concept ;
+             skos:prefLabel  "締結部品"@ja , "fastener"@en .
+
+ex:bolt      a skos:Concept ;
+             skos:prefLabel  "ボルト"@ja , "bolt"@en ;
+             skos:altLabel   "ボルト類"@ja ;
+             skos:broader    ex:fastener .
+```
+
+![SKOS の例。用語の上下関係と表記を持つ。](figures/el-skos.svg){#fig-el-skos width=90%}
+
+**似たものとの違い**
+
+OWL のクラスの階層は論理的な包含関係を表す。SKOS の上位と下位は、用語の広い狭いというゆるやかな関係である。
+
+**限界と注意点**
+
+用語の整理には手軽だが、推論の根拠となる厳密な定義は書けない。
+
+### SHACL {#sec-el-shacl}
+
+**概要**
+
+RDF グラフを、条件の集合に照らして検証するための言語である [@w3c_shacl_2017]。
+
+**解く問題**
+
+受け取ったデータが、必須の項目を備え、値の型や範囲が正しいかを機械的に検査する。
+
+**具体例**
+
+次のシェイプは、部品に名称と供給者が必ずあり、重量が 0 より大きいことを求める。
+
+```turtle
+@prefix ex:  <https://example.org/> .
+@prefix sh:  <http://www.w3.org/ns/shacl#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+ex:PartShape  a sh:NodeShape ;
+    sh:targetClass  ex:Part ;
+    sh:property [
+        sh:path      ex:name ;
+        sh:datatype  xsd:string ;
+        sh:minCount  1
+    ] ;
+    sh:property [
+        sh:path      ex:suppliedBy ;
+        sh:class     ex:Supplier ;
+        sh:minCount  1
+    ] ;
+    sh:property [
+        sh:path          ex:weightGram ;
+        sh:minExclusive  0
+    ] .
+```
+
+次のデータは、供給者がなく重量が負なので、2 件の違反として報告される。
+
+```turtle
+@prefix ex: <https://example.org/> .
+
+# 供給者がなく、重量が負の部品
+ex:P-200  a              ex:Part ;
+          ex:name        "平ワッシャー M8" ;
+          ex:weightGram  -1 .
+```
+
+![SHACL による検証の流れ。](figures/el-shacl.svg){#fig-el-shacl width=90%}
+
+**似たものとの違い**
+
+OWL は書かれていないことを未知と扱う。SHACL は、手元のデータに書かれていなければ違反と判定する。
+
+**使われている場所**
+
+Gaia-X はクレデンシャルを SHACL のシェイプに照らして検証する [@gaiax_arch_2404]。Catena-X が使う SAMM は、SHACL の検証規則を伴う [@esmf_samm]。
+
+**限界と注意点**
+
+検査できるのは形と値の条件である。値が現実と合っているかは検査できない。
+
+### JSON-LD {#sec-el-jsonld}
+
+**概要**
+
+Linked Data を直列化するための、JSON ベースの形式である [@w3c_jsonld_2014]。
+
+**解く問題**
+
+開発者が慣れた JSON の形のまま、RDF として解釈できるデータを書けるようにする。
+
+**具体例**
+
+```json
+{
+  "@context": {
+    "ex": "https://example.org/",
+    "name": "ex:name",
+    "weightGram": "ex:weightGram",
+    "suppliedBy": { "@id": "ex:suppliedBy", "@type": "@id" }
+  },
+  "@id": "ex:P-100",
+  "@type": "ex:Part",
+  "name": "六角ボルト M8",
+  "weightGram": 12,
+  "suppliedBy": "ex:S-01"
+}
+```
+
+この文書は、RDF の項で示した部品の 4 つの文と同じ内容に解釈される。
+
+![JSON-LD の仕組み。`@context` が JSON の項目名を識別子に読み替える。](figures/el-jsonld.svg){#fig-el-jsonld width=90%}
+
+**似たものとの違い**
+
+ふつうの JSON では、`name` という項目名の意味は送り手と受け手の取り決めに任される。JSON-LD では `@context` が項目名を識別子に対応づける。
+
+**使われている場所**
+
+データスペースプロトコルは JSON-LD 1.1 を用いる [@dsp_2025_common]。日本の ODS のメタデータエクスチェンジ仕様は、メタデータを JSON-LD 形式で送受信することを原則とする [@ods_odp_metadata_exchange]。
+
+**限界と注意点**
+
+数値の型には注意が要る。JSON の小数は倍精度の浮動小数点数として解釈され、Turtle で書いた小数とは別の型になる。本章の例は、この食い違いを避けるために重量を整数にした。
+
+### DCAT {#sec-el-dcat}
+
+**概要**
+
+Web 上で公開されるデータカタログの間の相互運用性を高めるための RDF 語彙である [@w3c_dcat3_2024]。
+
+**解く問題**
+
+どこにどんなデータがあり、どうすれば入手できるかを、カタログをまたいで同じ形で記述する。
+
+**具体例**
+
+```turtle
+@prefix ex:      <https://example.org/> .
+@prefix dcat:    <http://www.w3.org/ns/dcat#> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+
+ex:catalog  a dcat:Catalog ;
+    dcterms:title  "東和精工 データカタログ"@ja ;
+    dcat:dataset   ex:parts-master .
+
+ex:parts-master  a dcat:Dataset ;
+    dcterms:title       "部品マスタ"@ja ;
+    dcterms:conformsTo  ex:PartShape ;
+    dcat:keyword        "部品"@ja , "締結部品"@ja ;
+    dcat:distribution   ex:parts-master-csv .
+
+ex:parts-master-csv  a dcat:Distribution ;
+    dcat:mediaType    <https://www.iana.org/assignments/media-types/text/csv> ;
+    dcat:accessURL    <https://example.org/data/parts> .
+```
+
+![DCAT の主なクラス。](figures/el-dcat.svg){#fig-el-dcat width=90%}
+
+**似たものとの違い**
+
+DCAT が記述するのは、データそのものではなくデータについての情報である。データの中身の意味は、別のデータモデルが担う。DSSC のブループリントは、データセットが `dcterms:conformsTo` でデータモデルを参照できるとしている [@dssc_blueprint_data_models]。
+
+**使われている場所**
+
+データスペースプロトコルのカタログは DCAT の語彙を再利用する [@dsp_2025_catalog]。欧州の DCAT-AP は DCAT のプロファイルである [@semic_dcatap_301]。
+
+**限界と注意点**
+
+DCAT で目録を共有しても、データの中身の解釈が一致するとは限らない。
+
+### XML Schema と JSON Schema {#sec-el-schema}
+
+**概要**
+
+XML Schema は、XML 文書の構造を記述し、内容を制約する言語である [@w3c_xmlschema_2001]。JSON Schema は、JSON データの構造と制約を定義する宣言的な言語である [@json_schema_what]。
+
+**解く問題**
+
+受け取った文書が、決められた項目と型を備えているかを検査する。
+
+**具体例**
+
+```json
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "type": "object",
+  "required": ["part_id", "name", "supplier_id"],
+  "properties": {
+    "part_id":     { "type": "string", "pattern": "^P-[0-9]+$" },
+    "name":        { "type": "string" },
+    "weight_g":    { "type": "number", "exclusiveMinimum": 0 },
+    "supplier_id": { "type": "string" }
+  }
+}
+```
+
+![スキーマによる文書の検査。](figures/el-schema.svg){#fig-el-schema width=90%}
+
+**似たものとの違い**
+
+SHACL がグラフを検査するのに対し、これらは木の形の文書を検査する。項目の意味は扱わない。
+
+**使われている場所**
+
+データスペースプロトコルのメッセージは、JSON Schema で規範的に定義される [@dsp_2025_common]。
+
+**限界と注意点**
+
+形が合っていても、送り手と受け手が項目の意味を同じに解釈している保証はない。
+
+### schema.org {#sec-el-schemaorg}
+
+**概要**
+
+Web ページの構造化データのマークアップに使う、共通のスキーマ群である。2011 年に Google、Bing、Yahoo! の取り組みとして発表された [@google_schema_org_2011]。
+
+**解く問題**
+
+Web ページに書かれた事物の種類と属性を、検索エンジンが共通の語彙で読み取れるようにする。
+
+**具体例**
+
+![schema.org による構造化データの読み取り。](figures/el-schemaorg.svg){#fig-el-schemaorg width=90%}
+
+**限界と注意点**
+
+W3C の勧告ではなく、検索エンジン各社が始めた語彙である。本調査では、現在の採用状況は確認していない。
+
+## 分析系 {#sec-el-bi}
+
+### セマンティックレイヤ {#sec-el-sl}
+
+**概要**
+
+データウェアハウスと、それを使うツールの間に位置するソフトウェア層である。これはベンダの用語集による説明である [@atscale_semantic_layer]。Google は Looker を、指標を一度定義してどこでも使えるセマンティックモデルを中核とする設計だと説明している [@google_looker_2024]。
+
+**解く問題**
+
+「売上」や「部品点数」のような指標の計算方法が、部署やツールごとに食い違うことを防ぐ。
+
+::: {.callout-note}
+## 補足：指標とディメンションとは
+
+分析の世界で使う言葉である。データを集計するときの「何を数えるか」と「どの単位で分けるか」にあたる。
+
+- **指標**（メトリクス、メジャーとも呼ぶ）は、合計、平均、比率のように、データを集計して得る数値である [@ossie_core_spec]。例は、部品点数、平均重量、売上である。
+- **ディメンション**は、集計を分ける切り口である。行ごとの属性のうち、グループ分けや絞り込みに使うものを指す [@ossie_core_spec]。例は、供給者、月、地域である。
+- **結合**は、別々の表をどの列でつなぐかの取り決めである。
+
+「供給者ごとの部品点数」という集計では、部品点数が指標、供給者がディメンションにあたる。部品の表と供給者の表を、供給者番号で結合して数える。
+
+```sql
+-- 指標: 部品点数（部品の数を数える）
+-- ディメンション: 供給者の名称（この単位で分けて数える）
+SELECT supplier.name                AS supplier_name,
+       COUNT(DISTINCT part.part_id) AS part_count
+FROM part JOIN supplier ON part.supplier_id = supplier.supplier_id
+GROUP BY supplier.name;
+```
+
+指標の定義は、書く人によって食い違いやすい。「部品点数」に廃番の部品を含めるのか、同じ部品を二重に数えていないか、といった判断が、ツールや部署ごとに別々に行われるためである。セマンティックレイヤは、この定義を一か所に書いて共有する。
+:::
+
+**具体例**
+
+![セマンティックレイヤの位置。](figures/el-semantic-layer.svg){#fig-el-semantic-layer width=90%}
+
+**似たものとの違い**
+
+オントロジーが概念の意味を定義するのに対し、セマンティックレイヤは集計の計算方法を定義する。同じ「セマンティック」という語を使うが、対象が違う。
+
+**使われている場所**
+
+Databricks の Unity Catalog Business Semantics、dbt Labs の MetricFlow、Google の Looker がある [@databricks_semantics_2026; @dbt_metricflow_2025; @google_looker_2024]。Microsoft は Power BI のデータセットをセマンティックモデルに改称した [@ms_learn_semantic_model]。
+
+**限界と注意点**
+
+定義の形式は製品ごとに異なる。この違いを埋めようとするのが、次の Apache Ossie である。
+
+### OSI と Apache Ossie {#sec-el-ossie}
+
+**概要**
+
+セマンティックモデルの定義を、ツールの間で交換するための仕様である。Open Semantic Interchange（OSI）として 2025 年に発表され、現在は Apache Ossie (Incubating) という名称である [@snowflake_osi_pr_2025; @incubator_ossie_status]。仕様は JSON と YAML にもとづき、1 つの文書が 1 つのセマンティックモデルを表す [@ossie_readme; @ossie_core_spec]。
+
+**解く問題**
+
+ある製品で定義した指標を、別の製品や AI エージェントでも同じ定義のまま使えるようにする。
+
+**具体例**
+
+```yaml
+version: 0.2.0.dev0
+name: procurement
+description: 部品の調達に関する分析モデル
+
+datasets:
+  - name: part
+    source: erp.public.part
+    primary_key: [part_id]
+    fields:
+      - name: part_id
+        expression:
+          dialects:
+            - dialect: ANSI_SQL
+              expression: part_id
+      - name: weight_g
+        expression:
+          dialects:
+            - dialect: ANSI_SQL
+              expression: weight_g
+  - name: supplier
+    source: erp.public.supplier
+    primary_key: [supplier_id]
+    fields:
+      - name: supplier_name
+        expression:
+          dialects:
+            - dialect: ANSI_SQL
+              expression: name
+
+relationships:
+  - name: part_to_supplier
+    from: part
+    to: supplier
+    from_columns: [supplier_id]
+    to_columns: [supplier_id]
+
+metrics:
+  - name: part_count
+    description: 部品の点数
+    expression:
+      dialects:
+        - dialect: ANSI_SQL
+          expression: COUNT(DISTINCT part.part_id)
+    ai_context:
+      synonyms:
+        - "部品点数"
+        - "品目数"
+```
+
+この例は、仕様のリポジトリにある JSON Schema に適合することを確認した。対象とした仕様の版は 0.2.0.dev0 である [@ossie_core_spec]。
+
+![Apache Ossie による定義の交換。](figures/el-ossie.svg){#fig-el-ossie width=90%}
+
+**似たものとの違い**
+
+W3C の標準群が組織をまたぐ意味の共有を狙うのに対し、Ossie は分析ツールの間で指標の定義を持ち運ぶことを狙う。
+
+リポジトリには、セマンティックモデルの仕様とは別に、オントロジーの仕様もある。同仕様はオントロジーを、概念、関係、業務規則によって企業を記述する概念モデルと説明する [@ossie_ontology_spec]。OWL とは別の、独自の YAML の書式である。
+
+**使われている場所**
+
+経過と参加企業は @sec-osi にまとめた。
+
+**限界と注意点**
+
+仕様の版番号は開発版を示しており、Apache のインキュベーション段階にある。本調査では、各製品での実装状況は確認していない。

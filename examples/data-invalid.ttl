@@ -1,0 +1,6 @@
+@prefix ex: <https://example.org/> .
+
+# 供給者がなく、重量が負の部品
+ex:P-200  a              ex:Part ;
+          ex:name        "平ワッシャー M8" ;
+          ex:weightGram  -1 .

@@ -1,0 +1,79 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1040 612" width="1040" height="612" role="img" aria-label="四本の系譜の年表" font-family="'Noto Sans CJK JP','Hiragino Sans','Yu Gothic',sans-serif">
+<rect width="1040" height="612" fill="#ffffff"/>
+<line x1="212.2" y1="46" x2="212.2" y2="566" stroke="#d9dee4" stroke-width="1"/>
+<text x="212.2" y="38" font-size="13" fill="#52606d" text-anchor="middle">1970</text>
+<line x1="323.3" y1="46" x2="323.3" y2="566" stroke="#d9dee4" stroke-width="1"/>
+<text x="323.3" y="38" font-size="13" fill="#52606d" text-anchor="middle">1980</text>
+<line x1="434.4" y1="46" x2="434.4" y2="566" stroke="#d9dee4" stroke-width="1"/>
+<text x="434.4" y="38" font-size="13" fill="#52606d" text-anchor="middle">1990</text>
+<line x1="568.1" y1="46" x2="568.1" y2="566" stroke="#d9dee4" stroke-width="1"/>
+<text x="568.1" y="38" font-size="13" fill="#52606d" text-anchor="middle">2000</text>
+<line x1="646.2" y1="46" x2="646.2" y2="566" stroke="#d9dee4" stroke-width="1"/>
+<text x="646.2" y="38" font-size="13" fill="#52606d" text-anchor="middle">2005</text>
+<line x1="724.4" y1="46" x2="724.4" y2="566" stroke="#d9dee4" stroke-width="1"/>
+<text x="724.4" y="38" font-size="13" fill="#52606d" text-anchor="middle">2010</text>
+<line x1="802.5" y1="46" x2="802.5" y2="566" stroke="#d9dee4" stroke-width="1"/>
+<text x="802.5" y="38" font-size="13" fill="#52606d" text-anchor="middle">2015</text>
+<line x1="880.6" y1="46" x2="880.6" y2="566" stroke="#d9dee4" stroke-width="1"/>
+<text x="880.6" y="38" font-size="13" fill="#52606d" text-anchor="middle">2020</text>
+<line x1="958.8" y1="46" x2="958.8" y2="566" stroke="#d9dee4" stroke-width="1"/>
+<text x="958.8" y="38" font-size="13" fill="#52606d" text-anchor="middle">2025</text>
+<rect x="0" y="54" width="1040" height="128" fill="#f6f8fa"/>
+<rect x="0" y="68" width="6" height="100" fill="#0072B2"/>
+<text x="20" y="114" font-size="17" font-weight="700" fill="#1f2933">データベース系</text>
+<text x="20" y="134" font-size="12.5" fill="#52606d">データの構造を決める</text>
+<line x1="212.2" y1="118.0" x2="1004.0" y2="118.0" stroke="#0072B2" stroke-width="3" stroke-linecap="round" opacity="0.45"/>
+<circle cx="212.2" cy="118.0" r="7" fill="#0072B2" stroke="#ffffff" stroke-width="2"/>
+<text x="212.2" y="102" font-size="14" fill="#1f2933" text-anchor="middle">関係モデル <tspan fill="#52606d" font-size="12.5">1970</tspan></text>
+<circle cx="278.9" cy="118.0" r="7" fill="#0072B2" stroke="#ffffff" stroke-width="2"/>
+<text x="278.9" y="148" font-size="14" fill="#1f2933" text-anchor="middle">実体関連モデル <tspan fill="#52606d" font-size="12.5">1976</tspan></text>
+<circle cx="943.1" cy="118.0" r="7" fill="#0072B2" stroke="#ffffff" stroke-width="2"/>
+<text x="952.1" y="102" font-size="14" fill="#1f2933" text-anchor="end">GQL（グラフ問い合わせ） <tspan fill="#52606d" font-size="12.5">2024</tspan></text>
+<rect x="0" y="196" width="6" height="100" fill="#D55E00"/>
+<text x="20" y="242" font-size="17" font-weight="700" fill="#1f2933">知識表現系</text>
+<text x="20" y="262" font-size="12.5" fill="#52606d">概念と論理を記述する</text>
+<line x1="367.8" y1="246.0" x2="1004.0" y2="246.0" stroke="#D55E00" stroke-width="3" stroke-linecap="round" opacity="0.45"/>
+<circle cx="367.8" cy="246.0" r="7" fill="#D55E00" stroke="#ffffff" stroke-width="2"/>
+<text x="376.8" y="230" font-size="14" fill="#1f2933" text-anchor="end">Cyc 着手 <tspan fill="#52606d" font-size="12.5">1984</tspan></text>
+<circle cx="378.9" cy="246.0" r="7" fill="#D55E00" stroke="#ffffff" stroke-width="2"/>
+<text x="378.9" y="276" font-size="14" fill="#1f2933" text-anchor="middle">KL-ONE の概説論文 <tspan fill="#52606d" font-size="12.5">1985</tspan></text>
+<circle cx="467.8" cy="246.0" r="7" fill="#D55E00" stroke="#ffffff" stroke-width="2"/>
+<text x="467.8" y="230" font-size="14" fill="#1f2933" text-anchor="middle">オントロジーの定義 <tspan fill="#52606d" font-size="12.5">1993</tspan></text>
+<circle cx="536.9" cy="246.0" r="7" fill="#D55E00" stroke="#ffffff" stroke-width="2"/>
+<text x="536.9" y="276" font-size="14" fill="#1f2933" text-anchor="middle">定義の改訂と分類 <tspan fill="#52606d" font-size="12.5">1998</tspan></text>
+<circle cx="896.2" cy="246.0" r="7" fill="#D55E00" stroke="#ffffff" stroke-width="2"/>
+<text x="896.2" y="230" font-size="14" fill="#1f2933" text-anchor="middle">BFO が ISO/IEC 規格に <tspan fill="#52606d" font-size="12.5">2021</tspan></text>
+<rect x="0" y="310" width="1040" height="128" fill="#f6f8fa"/>
+<rect x="0" y="324" width="6" height="100" fill="#009E73"/>
+<text x="20" y="370" font-size="17" font-weight="700" fill="#1f2933">Web 標準系</text>
+<text x="20" y="390" font-size="12.5" fill="#52606d">意味を Web で共有する</text>
+<line x1="552.5" y1="374.0" x2="1004.0" y2="374.0" stroke="#009E73" stroke-width="3" stroke-linecap="round" opacity="0.45"/>
+<circle cx="552.5" cy="374.0" r="7" fill="#009E73" stroke="#ffffff" stroke-width="2"/>
+<text x="552.5" y="358" font-size="14" fill="#1f2933" text-anchor="middle">RDF <tspan fill="#52606d" font-size="12.5">1999</tspan></text>
+<circle cx="630.6" cy="374.0" r="7" fill="#009E73" stroke="#ffffff" stroke-width="2"/>
+<text x="630.6" y="404" font-size="14" fill="#1f2933" text-anchor="middle">OWL <tspan fill="#52606d" font-size="12.5">2004</tspan></text>
+<circle cx="693.1" cy="374.0" r="7" fill="#009E73" stroke="#ffffff" stroke-width="2"/>
+<text x="702.1" y="358" font-size="14" fill="#1f2933" text-anchor="end">SPARQL <tspan fill="#52606d" font-size="12.5">2008</tspan></text>
+<circle cx="708.8" cy="374.0" r="7" fill="#009E73" stroke="#ffffff" stroke-width="2"/>
+<text x="699.8" y="404" font-size="14" fill="#1f2933" text-anchor="start">SKOS <tspan fill="#52606d" font-size="12.5">2009</tspan></text>
+<circle cx="786.9" cy="374.0" r="7" fill="#009E73" stroke="#ffffff" stroke-width="2"/>
+<text x="786.9" y="358" font-size="14" fill="#1f2933" text-anchor="middle">DCAT、JSON-LD <tspan fill="#52606d" font-size="12.5">2014</tspan></text>
+<circle cx="833.8" cy="374.0" r="7" fill="#009E73" stroke="#ffffff" stroke-width="2"/>
+<text x="833.8" y="404" font-size="14" fill="#1f2933" text-anchor="middle">SHACL <tspan fill="#52606d" font-size="12.5">2017</tspan></text>
+<circle cx="943.1" cy="374.0" r="7" fill="#009E73" stroke="#ffffff" stroke-width="2"/>
+<text x="943.1" y="358" font-size="14" fill="#1f2933" text-anchor="middle">DCAT 第 3 版 <tspan fill="#52606d" font-size="12.5">2024</tspan></text>
+<rect x="0" y="452" width="6" height="100" fill="#7B4EA3"/>
+<text x="20" y="498" font-size="17" font-weight="700" fill="#1f2933">分析系</text>
+<text x="20" y="518" font-size="12.5" fill="#52606d">指標の定義を一元化する</text>
+<line x1="445.6" y1="502.0" x2="1004.0" y2="502.0" stroke="#7B4EA3" stroke-width="3" stroke-linecap="round" opacity="0.45"/>
+<circle cx="445.6" cy="502.0" r="7" fill="#7B4EA3" stroke="#ffffff" stroke-width="2"/>
+<text x="445.6" y="486" font-size="14" fill="#1f2933" text-anchor="middle">Business Objects の特許 <tspan fill="#52606d" font-size="12.5">1991</tspan></text>
+<circle cx="927.5" cy="502.0" r="7" fill="#7B4EA3" stroke="#ffffff" stroke-width="2"/>
+<text x="936.5" y="486" font-size="14" fill="#1f2933" text-anchor="end">Power BI が「セマンティックモデル」に改称 <tspan fill="#52606d" font-size="12.5">2023</tspan></text>
+<circle cx="958.8" cy="502.0" r="7" fill="#7B4EA3" stroke="#ffffff" stroke-width="2"/>
+<text x="967.8" y="532" font-size="14" fill="#1f2933" text-anchor="end">OSI 発表 <tspan fill="#52606d" font-size="12.5">2025</tspan></text>
+<line x1="974.4" y1="502.0" x2="974.4" y2="540" stroke="#7B4EA3" stroke-width="1" opacity="0.6"/>
+<circle cx="974.4" cy="502.0" r="7" fill="#7B4EA3" stroke="#ffffff" stroke-width="2"/>
+<text x="983.4" y="554" font-size="14" fill="#1f2933" text-anchor="end">Apache Ossie、OKF <tspan fill="#52606d" font-size="12.5">2026</tspan></text>
+<text x="20" y="594" font-size="12.5" fill="#52606d">横軸は年。1995 年以前は間隔を詰めて描いている。色は系統の区別だけを表す。</text>
+</svg>

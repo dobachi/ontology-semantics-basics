@@ -1,0 +1,10 @@
+@prefix ex:   <https://example.org/term/> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+
+ex:fastener  a skos:Concept ;
+             skos:prefLabel  "締結部品"@ja , "fastener"@en .
+
+ex:bolt      a skos:Concept ;
+             skos:prefLabel  "ボルト"@ja , "bolt"@en ;
+             skos:altLabel   "ボルト類"@ja ;
+             skos:broader    ex:fastener .

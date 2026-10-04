@@ -1,0 +1,22 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 760 360" width="760" height="360" role="img" aria-label="意味の定義の読み手" font-family="'Noto Sans CJK JP','Hiragino Sans','Yu Gothic',sans-serif">
+<defs><marker id="a" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="8" markerHeight="8" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#52606d"/></marker></defs>
+<rect width="760" height="360" fill="#ffffff"/>
+<rect x="40" y="130" width="220" height="90" rx="8" fill="#e6f5f0" stroke="#009E73" stroke-width="1.5"/>
+<text x="150.0" y="154" font-size="15" fill="#1f2933" text-anchor="middle" font-weight="700">意味の定義</text>
+<text x="150.0" y="176" font-size="13" fill="#52606d" text-anchor="middle">指標、規則、語彙</text>
+<rect x="470" y="40" width="250" height="76" rx="8" fill="#f6f8fa" stroke="#9aa5b1" stroke-width="1.5"/>
+<text x="595.0" y="64" font-size="15" fill="#1f2933" text-anchor="middle" font-weight="700">人</text>
+<text x="595.0" y="86" font-size="13" fill="#52606d" text-anchor="middle">定義書を読み、尋ねて確かめる</text>
+<line x1="262" y1="175" x2="468" y2="78" stroke="#52606d" stroke-width="1.5" marker-end="url(#a)"/>
+<rect x="470" y="140" width="250" height="76" rx="8" fill="#f6f8fa" stroke="#9aa5b1" stroke-width="1.5"/>
+<text x="595.0" y="164" font-size="15" fill="#1f2933" text-anchor="middle" font-weight="700">分析ツール</text>
+<text x="595.0" y="186" font-size="13" fill="#52606d" text-anchor="middle">定義どおりに計算する</text>
+<line x1="262" y1="175" x2="468" y2="178" stroke="#52606d" stroke-width="1.5" marker-end="url(#a)"/>
+<rect x="470" y="240" width="250" height="76" rx="8" fill="#fcefe6" stroke="#D55E00" stroke-width="1.5"/>
+<text x="595.0" y="264" font-size="15" fill="#1f2933" text-anchor="middle" font-weight="700">AI エージェント</text>
+<text x="595.0" y="286" font-size="13" fill="#52606d" text-anchor="middle">定義がなければ推測する</text>
+<line x1="262" y1="175" x2="468" y2="278" stroke="#52606d" stroke-width="1.5" marker-end="url(#a)"/>
+<text x="365" y="36" font-size="13" fill="#52606d" text-anchor="middle">読み手</text>
+<text x="470" y="232" font-size="12.5" fill="#D55E00" text-anchor="start">近年、読み手に加わった</text>
+<text x="40" y="340" font-size="13" fill="#1f2933" text-anchor="start">どこまでを推測に任せ、どこからを定義で渡すかを決める必要がある。</text>
+</svg>

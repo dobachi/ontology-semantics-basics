@@ -1,0 +1,23 @@
+url	title	span	note
+https://www.w3.org/TR/1999/REC-rdf-syntax-19990222/	RDF Model and Syntax Specification	22 February 1999	date
+https://www.w3.org/TR/1999/REC-rdf-syntax-19990222/	RDF Model and Syntax Specification	Resource Description Framework (RDF) is a foundation for processing metadata; it provides interoperability between applications that exchange machine-understandable information on the Web.	purpose
+https://www.w3.org/TR/2014/REC-rdf11-concepts-20140225/	RDF 1.1 Concepts and Abstract Syntax	W3C Recommendation 25 February 2014	date
+https://www.w3.org/TR/2014/REC-rdf11-concepts-20140225/	RDF 1.1 Concepts and Abstract Syntax	The Resource Description Framework (RDF) is a framework for representing information in the Web.	purpose
+https://www.w3.org/TR/rdf12-concepts/	RDF 1.2 Concepts and Abstract Data Model	W3C Candidate Recommendation Snapshot 07 April 2026	status
+https://www.w3.org/TR/2014/REC-rdf-schema-20140225/	RDF Schema 1.1	W3C Recommendation 25 February 2014	date
+https://www.w3.org/TR/2014/REC-rdf-schema-20140225/	RDF Schema 1.1	RDF Schema provides a data-modelling vocabulary for RDF data.	purpose
+https://www.w3.org/TR/2004/REC-owl-features-20040210/	OWL Web Ontology Language Overview	W3C Recommendation 10 February 2004	date
+https://www.w3.org/TR/2004/REC-owl-features-20040210/	OWL Web Ontology Language Overview	The OWL Web Ontology Language is designed for use by applications that need to process the content of information instead of just presenting information to humans.	purpose
+https://www.w3.org/TR/2012/REC-owl2-overview-20121211/	OWL 2 Document Overview (Second Edition)	W3C Recommendation 11 December 2012	date
+https://www.w3.org/TR/2012/REC-owl2-overview-20121211/	OWL 2 Document Overview (Second Edition)	The OWL 2 Web Ontology Language, informally OWL 2, is an ontology language for the Semantic Web with formally defined meaning.	purpose
+https://www.w3.org/TR/2009/REC-skos-reference-20090818/	SKOS Reference	W3C Recommendation 18 August 2009	date
+https://www.w3.org/TR/2009/REC-skos-reference-20090818/	SKOS Reference	This document defines the Simple Knowledge Organization System (SKOS), a common data model for sharing and linking knowledge organization systems via the Web.	purpose
+https://www.w3.org/TR/2008/REC-rdf-sparql-query-20080115/	SPARQL Query Language for RDF	W3C Recommendation 15 January 2008	date
+https://www.w3.org/TR/2013/REC-sparql11-overview-20130321/	SPARQL 1.1 Overview	W3C Recommendation 21 March 2013	date
+https://www.w3.org/TR/2013/REC-sparql11-overview-20130321/	SPARQL 1.1 Overview	It provides an introduction to a set of W3C specifications that facilitate querying and manipulating RDF graph content on the Web or in an RDF store.	purpose
+https://www.w3.org/TR/2017/REC-shacl-20170720/	Shapes Constraint Language (SHACL)	W3C Recommendation 20 July 2017	date
+https://www.w3.org/TR/2017/REC-shacl-20170720/	Shapes Constraint Language (SHACL)	This document defines the SHACL Shapes Constraint Language, a language for validating RDF graphs against a set of conditions.	purpose
+https://www.w3.org/TR/2014/REC-json-ld-20140116/	JSON-LD 1.0	16 January 2014	date
+https://www.w3.org/TR/2014/REC-json-ld-20140116/	JSON-LD 1.0	This specification defines JSON-LD, a JSON-based format to serialize Linked Data.	purpose
+https://www.w3.org/TR/2020/REC-json-ld11-20200716/	JSON-LD 1.1	W3C Recommendation 16 July 2020	date
+https://www.w3.org/2001/sw/	W3C Semantic Web Activity	The Semantic Web provides a common framework that allows data to be shared and reused across application, enterprise, and community boundaries.	purpose

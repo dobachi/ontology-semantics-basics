@@ -1,0 +1,28 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 760 230" width="760" height="230" role="img" aria-label="意味の指定の強さによる連続体" font-family="'Noto Sans CJK JP','Hiragino Sans','Yu Gothic',sans-serif">
+<defs><marker id="a" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="8" markerHeight="8" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#52606d"/></marker></defs>
+<rect width="760" height="230" fill="#ffffff"/>
+<line x1="30" y1="150" x2="730" y2="150" stroke="#52606d" stroke-width="1.5" marker-end="url(#a)"/>
+<text x="30" y="178" font-size="12.5" fill="#52606d" text-anchor="start">意味の指定が少ない</text>
+<text x="730" y="178" font-size="12.5" fill="#52606d" text-anchor="end">意味の指定が多く、形式的</text>
+<rect x="30" y="30" width="168" height="92" rx="4" fill="#f6f8fa" stroke="#9aa5b1" stroke-width="1.2"/>
+<text x="114.0" y="56" font-size="13.5" fill="#1f2933" text-anchor="middle" font-weight="700">用語集、データ辞書</text>
+<text x="114.0" y="80" font-size="12.5" fill="#52606d" text-anchor="middle">用語の一覧</text>
+<text x="114.0" y="99" font-size="12.5" fill="#52606d" text-anchor="middle">自然言語による説明</text>
+<line x1="114.0" y1="122" x2="114.0" y2="150" stroke="#9aa5b1" stroke-width="1.2"/>
+<rect x="205" y="30" width="168" height="92" rx="4" fill="#f6f8fa" stroke="#9aa5b1" stroke-width="1.2"/>
+<text x="289.0" y="56" font-size="13.5" fill="#1f2933" text-anchor="middle" font-weight="700">シソーラス、分類</text>
+<text x="289.0" y="80" font-size="12.5" fill="#52606d" text-anchor="middle">広い語と狭い語</text>
+<text x="289.0" y="99" font-size="12.5" fill="#52606d" text-anchor="middle">言い換え</text>
+<line x1="289.0" y1="122" x2="289.0" y2="150" stroke="#9aa5b1" stroke-width="1.2"/>
+<rect x="380" y="30" width="168" height="92" rx="4" fill="#f6f8fa" stroke="#9aa5b1" stroke-width="1.2"/>
+<text x="464.0" y="56" font-size="13.5" fill="#1f2933" text-anchor="middle" font-weight="700">スキーマ、データモデル</text>
+<text x="464.0" y="80" font-size="12.5" fill="#52606d" text-anchor="middle">DB や XML のスキーマ</text>
+<text x="464.0" y="99" font-size="12.5" fill="#52606d" text-anchor="middle">UML などのデータモデル</text>
+<line x1="464.0" y1="122" x2="464.0" y2="150" stroke="#9aa5b1" stroke-width="1.2"/>
+<rect x="555" y="30" width="168" height="92" rx="4" fill="#f6f8fa" stroke="#9aa5b1" stroke-width="1.2"/>
+<text x="639.0" y="56" font-size="13.5" fill="#1f2933" text-anchor="middle" font-weight="700">形式的なオントロジー</text>
+<text x="639.0" y="80" font-size="12.5" fill="#52606d" text-anchor="middle">記述論理（OWL）</text>
+<text x="639.0" y="99" font-size="12.5" fill="#52606d" text-anchor="middle">一般の論理</text>
+<line x1="639.0" y1="122" x2="639.0" y2="150" stroke="#9aa5b1" stroke-width="1.2"/>
+<text x="30" y="212" font-size="12.5" fill="#52606d" text-anchor="start">成果物の種類を、意味をどれだけ形式的に指定するかの順に並べたもの。</text>
+</svg>

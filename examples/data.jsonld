@@ -1,0 +1,13 @@
+{
+  "@context": {
+    "ex": "https://example.org/",
+    "name": "ex:name",
+    "weightGram": "ex:weightGram",
+    "suppliedBy": { "@id": "ex:suppliedBy", "@type": "@id" }
+  },
+  "@id": "ex:P-100",
+  "@type": "ex:Part",
+  "name": "六角ボルト M8",
+  "weightGram": 12,
+  "suppliedBy": "ex:S-01"
+}

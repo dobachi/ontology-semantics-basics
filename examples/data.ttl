@@ -1,0 +1,10 @@
+@prefix ex:  <https://example.org/> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+ex:P-100  a              ex:Part ;
+          ex:name        "六角ボルト M8" ;
+          ex:weightGram  12 ;
+          ex:suppliedBy  ex:S-01 .
+
+ex:S-01   a        ex:Supplier ;
+          ex:name  "東和精工" .

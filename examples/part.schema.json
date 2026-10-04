@@ -1,0 +1,11 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "type": "object",
+  "required": ["part_id", "name", "supplier_id"],
+  "properties": {
+    "part_id":     { "type": "string", "pattern": "^P-[0-9]+$" },
+    "name":        { "type": "string" },
+    "weight_g":    { "type": "number", "exclusiveMinimum": 0 },
+    "supplier_id": { "type": "string" }
+  }
+}

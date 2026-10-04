@@ -1,0 +1,23 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 760 230" width="760" height="230" role="img" aria-label="SPARQL の問い合わせの流れ" font-family="'Noto Sans CJK JP','Hiragino Sans','Yu Gothic',sans-serif">
+<defs><marker id="a" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="8" markerHeight="8" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#52606d"/></marker></defs>
+<rect width="760" height="230" fill="#ffffff"/>
+<rect x="30" y="40" width="210" height="150" rx="8" fill="#e6f5f0" stroke="#009E73" stroke-width="1.5"/>
+<text x="135.0" y="64" font-size="15" fill="#1f2933" text-anchor="middle" font-weight="700">RDF グラフ</text>
+<text x="135.0" y="86" font-size="13" fill="#52606d" text-anchor="middle">ex:P-100</text>
+<text x="135.0" y="105" font-size="13" fill="#52606d" text-anchor="middle">  suppliedBy ex:S-01</text>
+<text x="135.0" y="124" font-size="13" fill="#52606d" text-anchor="middle">  name 六角ボルト M8</text>
+<text x="135.0" y="143" font-size="13" fill="#52606d" text-anchor="middle">ex:S-01</text>
+<text x="135.0" y="162" font-size="13" fill="#52606d" text-anchor="middle">  name 東和精工</text>
+<rect x="290" y="40" width="210" height="150" rx="8" fill="#e6f5f0" stroke="#009E73" stroke-width="1.5"/>
+<text x="395.0" y="64" font-size="15" fill="#1f2933" text-anchor="middle" font-weight="700">パターン</text>
+<text x="395.0" y="86" font-size="13" fill="#52606d" text-anchor="middle">?part suppliedBy ?supplier</text>
+<text x="395.0" y="105" font-size="13" fill="#52606d" text-anchor="middle">?part name ?partName</text>
+<text x="395.0" y="124" font-size="13" fill="#52606d" text-anchor="middle">?supplier name ?supplierName</text>
+<rect x="550" y="40" width="190" height="150" rx="8" fill="#e6f5f0" stroke="#009E73" stroke-width="1.5"/>
+<text x="645.0" y="64" font-size="15" fill="#1f2933" text-anchor="middle" font-weight="700">結果の表</text>
+<text x="645.0" y="86" font-size="13" fill="#52606d" text-anchor="middle">partName: 六角ボルト M8</text>
+<text x="645.0" y="105" font-size="13" fill="#52606d" text-anchor="middle">supplierName: 東和精工</text>
+<line x1="240" y1="115" x2="290" y2="115" stroke="#52606d" stroke-width="1.5" marker-end="url(#a)"/>
+<line x1="500" y1="115" x2="550" y2="115" stroke="#52606d" stroke-width="1.5" marker-end="url(#a)"/>
+<text x="30" y="215" font-size="13" fill="#52606d" text-anchor="start">「?」で始まる変数を含むパターンを書き、グラフの中で当てはまる部分を取り出す。</text>
+</svg>

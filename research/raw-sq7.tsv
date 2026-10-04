@@ -1,0 +1,8 @@
+url	title	span	note
+https://github.com/International-Data-Spaces-Association/InformationModel	IDS Information Model (GitHub)	an RDFS/OWL-ontology covering the fundamental concepts of the International Data Spaces (IDS)	what; version 4.1.0 and archived 2025-06-13 reported non-verbatim, re-verify
+https://eclipse-dataspace-protocol-base.github.io/DataspaceProtocol/2025-1-err2	Dataspace Protocol 2025-1	This version (2025-1) of the Dataspace Protocol specification is a release of the specification and considered to be stable.	version
+https://eclipse-dataspace-protocol-base.github.io/DataspaceProtocol/2025-1-err2	Dataspace Protocol 2025-1	The Dataspace Protocol is a specification designed to facilitate interoperable data sharing between entities governed by usage control and based on Web technologies.	purpose
+https://docs.gaia-x.eu/technical-committee/architecture-document/24.04/gx_conceptual_model/	Gaia-X Architecture Document 24.04 Conceptual model	Gaia-X Credentials are W3C Verifiable Credentials with claims expressed in RDF.	what
+https://docs.gaia-x.eu/technical-committee/architecture-document/24.04/gx_conceptual_model/	Gaia-X Architecture Document 24.04 Conceptual model	this data graph must be validated against the given shapes graph according to the SHACL specification.	SHACL
+https://eclipse-esmf.github.io/samm-specification/snapshot/index.html	SAMM Specification	Aspect Models are likewise specified in RDF/Turtle, following SAMM semantics.	what
+https://semiceu.github.io/DCAT-AP/releases/3.0.1/	DCAT-AP 3.0.1	a DCAT profile for sharing information about Catalogues containing Datasets and Data Services descriptions in Europe	what; date non-verbatim

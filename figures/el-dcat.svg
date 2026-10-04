@@ -1,0 +1,24 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 760 250" width="760" height="250" role="img" aria-label="DCAT の主なクラス" font-family="'Noto Sans CJK JP','Hiragino Sans','Yu Gothic',sans-serif">
+<defs><marker id="a" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="8" markerHeight="8" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#52606d"/></marker></defs>
+<rect width="760" height="250" fill="#ffffff"/>
+<rect x="30" y="40" width="170" height="90" rx="8" fill="#e6f5f0" stroke="#009E73" stroke-width="1.5"/>
+<text x="115.0" y="64" font-size="14" fill="#1f2933" text-anchor="middle" font-weight="700">dcat:Catalog</text>
+<text x="115.0" y="86" font-size="13" fill="#52606d" text-anchor="middle">データの目録</text>
+<text x="115.0" y="105" font-size="13" fill="#52606d" text-anchor="middle">例: データカタログ</text>
+<rect x="295" y="40" width="170" height="90" rx="8" fill="#e6f5f0" stroke="#009E73" stroke-width="1.5"/>
+<text x="380.0" y="64" font-size="14" fill="#1f2933" text-anchor="middle" font-weight="700">dcat:Dataset</text>
+<text x="380.0" y="86" font-size="13" fill="#52606d" text-anchor="middle">データのまとまり</text>
+<text x="380.0" y="105" font-size="13" fill="#52606d" text-anchor="middle">例: 部品マスタ</text>
+<rect x="560" y="40" width="180" height="90" rx="8" fill="#e6f5f0" stroke="#009E73" stroke-width="1.5"/>
+<text x="650.0" y="64" font-size="14" fill="#1f2933" text-anchor="middle" font-weight="700">dcat:Distribution</text>
+<text x="650.0" y="86" font-size="13" fill="#52606d" text-anchor="middle">入手できる形と場所</text>
+<text x="650.0" y="105" font-size="13" fill="#52606d" text-anchor="middle">例: CSV、URL</text>
+<line x1="200" y1="85" x2="295" y2="85" stroke="#52606d" stroke-width="1.5" marker-end="url(#a)"/>
+<line x1="465" y1="85" x2="560" y2="85" stroke="#52606d" stroke-width="1.5" marker-end="url(#a)"/>
+<text x="247" y="74" font-size="12" fill="#52606d" text-anchor="middle">dataset</text>
+<text x="512" y="74" font-size="12" fill="#52606d" text-anchor="middle">distribution</text>
+<rect x="285" y="180" width="190" height="50" rx="8" fill="#f6f8fa" stroke="#9aa5b1" stroke-width="1.5" stroke-dasharray="6 4"/>
+<text x="380.0" y="204" font-size="14" fill="#1f2933" text-anchor="middle" font-weight="700">データモデル</text>
+<line x1="380" y1="130" x2="380" y2="180" stroke="#52606d" stroke-width="1.5" marker-end="url(#a)"/>
+<text x="392" y="160" font-size="13" fill="#1f2933" text-anchor="start">dcterms:conformsTo</text>
+</svg>

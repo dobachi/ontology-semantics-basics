@@ -1,0 +1,25 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 760 312" width="760" height="312" role="img" aria-label="同じものを別の名前で呼ぶ問題と、共通の語彙による対応づけ" font-family="'Noto Sans CJK JP','Hiragino Sans','Yu Gothic',sans-serif">
+<defs><marker id="a" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="8" markerHeight="8" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#52606d"/></marker></defs>
+<rect width="760" height="312" fill="#ffffff"/>
+<rect x="30" y="20" width="210" height="70" rx="8" fill="#f6f8fa" stroke="#9aa5b1" stroke-width="1.5"/>
+<text x="135.0" y="44" font-size="15" fill="#1f2933" text-anchor="middle" font-weight="700">A 社の表</text>
+<text x="135.0" y="66" font-size="13" fill="#52606d" text-anchor="middle">supplier_id</text>
+<rect x="30" y="112" width="210" height="70" rx="8" fill="#f6f8fa" stroke="#9aa5b1" stroke-width="1.5"/>
+<text x="135.0" y="136" font-size="15" fill="#1f2933" text-anchor="middle" font-weight="700">B 社の表</text>
+<text x="135.0" y="158" font-size="13" fill="#52606d" text-anchor="middle">仕入先コード</text>
+<rect x="30" y="204" width="210" height="70" rx="8" fill="#f6f8fa" stroke="#9aa5b1" stroke-width="1.5"/>
+<text x="135.0" y="228" font-size="15" fill="#1f2933" text-anchor="middle" font-weight="700">C 社の表</text>
+<text x="135.0" y="250" font-size="13" fill="#52606d" text-anchor="middle">vendor</text>
+<rect x="300" y="92" width="160" height="70" rx="8" fill="#f6f8fa" stroke="#9aa5b1" stroke-width="1.5"/>
+<text x="380.0" y="116" font-size="15" fill="#1f2933" text-anchor="middle" font-weight="700">対応づけ</text>
+<rect x="520" y="72" width="210" height="110" rx="8" fill="#e6f5f0" stroke="#009E73" stroke-width="1.5"/>
+<text x="625.0" y="96" font-size="15" fill="#1f2933" text-anchor="middle" font-weight="700">共通の語彙</text>
+<text x="625.0" y="118" font-size="13" fill="#52606d" text-anchor="middle">ex:suppliedBy</text>
+<text x="625.0" y="137" font-size="13" fill="#52606d" text-anchor="middle">「部品の供給者」</text>
+<text x="625.0" y="156" font-size="13" fill="#52606d" text-anchor="middle">という意味を一度だけ定義</text>
+<line x1="240" y1="55" x2="300" y2="127" stroke="#52606d" stroke-width="1.5" marker-end="url(#a)"/>
+<line x1="240" y1="147" x2="300" y2="127" stroke="#52606d" stroke-width="1.5" marker-end="url(#a)"/>
+<line x1="240" y1="239" x2="300" y2="127" stroke="#52606d" stroke-width="1.5" marker-end="url(#a)"/>
+<line x1="460" y1="127" x2="520" y2="127" stroke="#52606d" stroke-width="1.5" marker-end="url(#a)"/>
+<text x="30" y="302" font-size="13" fill="#52606d" text-anchor="start">列の名前は会社ごとに違っても、指しているものが同じだと機械に分かるようにする。</text>
+</svg>

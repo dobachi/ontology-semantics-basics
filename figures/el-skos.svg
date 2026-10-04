@@ -1,0 +1,17 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 760 230" width="760" height="230" role="img" aria-label="SKOS の例" font-family="'Noto Sans CJK JP','Hiragino Sans','Yu Gothic',sans-serif">
+<defs><marker id="a" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="8" markerHeight="8" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#52606d"/></marker></defs>
+<rect width="760" height="230" fill="#ffffff"/>
+<rect x="250" y="30" width="260" height="62" rx="8" fill="#e6f5f0" stroke="#009E73" stroke-width="1.5"/>
+<text x="380.0" y="54" font-size="15" fill="#1f2933" text-anchor="middle" font-weight="700">締結部品</text>
+<text x="380.0" y="76" font-size="13" fill="#52606d" text-anchor="middle">prefLabel: 締結部品 / fastener</text>
+<rect x="250" y="140" width="260" height="82" rx="8" fill="#e6f5f0" stroke="#009E73" stroke-width="1.5"/>
+<text x="380.0" y="164" font-size="15" fill="#1f2933" text-anchor="middle" font-weight="700">ボルト</text>
+<text x="380.0" y="186" font-size="13" fill="#52606d" text-anchor="middle">prefLabel: ボルト / bolt</text>
+<text x="380.0" y="205" font-size="13" fill="#52606d" text-anchor="middle">altLabel: ボルト類</text>
+<line x1="380" y1="140" x2="380" y2="94" stroke="#52606d" stroke-width="1.5" marker-end="url(#a)"/>
+<text x="392" y="122" font-size="13" fill="#1f2933" text-anchor="start">skos:broader（上位）</text>
+<text x="30" y="60" font-size="13" fill="#52606d" text-anchor="start">用語の階層と</text>
+<text x="30" y="80" font-size="13" fill="#52606d" text-anchor="start">言語ごとの表記を管理する。</text>
+<text x="30" y="180" font-size="13" fill="#52606d" text-anchor="start">論理的な定義までは</text>
+<text x="30" y="200" font-size="13" fill="#52606d" text-anchor="start">書かない。</text>
+</svg>

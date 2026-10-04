@@ -1,0 +1,9 @@
+PREFIX ex: <https://example.org/>
+
+SELECT ?partName ?supplierName
+WHERE {
+  ?part      a              ex:Part ;
+             ex:name        ?partName ;
+             ex:suppliedBy  ?supplier .
+  ?supplier  ex:name        ?supplierName .
+}

@@ -1,0 +1,37 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 760 400" width="760" height="400" role="img" aria-label="ODS のオープンソース実装における意味の扱い" font-family="'Noto Sans CJK JP','Hiragino Sans','Yu Gothic',sans-serif">
+<defs><marker id="a" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="8" markerHeight="8" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#52606d"/></marker></defs>
+<rect width="760" height="400" fill="#ffffff"/>
+<text x="20" y="28" font-size="14" fill="#1f2933" text-anchor="start" font-weight="700">二層のオントロジー（OWL）</text>
+<rect x="20" y="42" width="350" height="66" rx="8" fill="#e6f5f0" stroke="#009E73" stroke-width="1.5"/>
+<text x="195.0" y="66" font-size="15" fill="#1f2933" text-anchor="middle" font-weight="700">ODS オントロジー</text>
+<text x="195.0" y="88" font-size="13" fill="#52606d" text-anchor="middle">データ交換サービスと接続先を定義する</text>
+<rect x="390" y="42" width="350" height="66" rx="8" fill="#e6f5f0" stroke="#009E73" stroke-width="1.5"/>
+<text x="565.0" y="66" font-size="15" fill="#1f2933" text-anchor="middle" font-weight="700">領域のオントロジー</text>
+<text x="565.0" y="88" font-size="13" fill="#52606d" text-anchor="middle">分野の概念を定義する。例: ドローン航路</text>
+<text x="20" y="146" font-size="14" fill="#1f2933" text-anchor="start" font-weight="700">分散カタログ</text>
+<rect x="20" y="160" width="200" height="62" rx="8" fill="#f6f8fa" stroke="#9aa5b1" stroke-width="1.5"/>
+<text x="120.0" y="184" font-size="15" fill="#1f2933" text-anchor="middle" font-weight="700">ドメインアプリケーション</text>
+<text x="120.0" y="206" font-size="13" fill="#52606d" text-anchor="middle">SPARQL エンドポイントを公開</text>
+<rect x="290" y="160" width="170" height="62" rx="8" fill="#f6f8fa" stroke="#9aa5b1" stroke-width="1.5"/>
+<text x="375.0" y="184" font-size="15" fill="#1f2933" text-anchor="middle" font-weight="700">分散カタログ</text>
+<text x="375.0" y="206" font-size="13" fill="#52606d" text-anchor="middle">RDF データを収集</text>
+<rect x="530" y="160" width="210" height="62" rx="8" fill="#e8f2f9" stroke="#0072B2" stroke-width="1.5"/>
+<text x="635.0" y="184" font-size="15" fill="#1f2933" text-anchor="middle" font-weight="700">キャッシュ</text>
+<text x="635.0" y="206" font-size="13" fill="#52606d" text-anchor="middle">収集したデータを格納し、問い合わせる</text>
+<line x1="222" y1="191" x2="288" y2="191" stroke="#52606d" stroke-width="1.5" marker-end="url(#a)"/>
+<line x1="462" y1="191" x2="528" y2="191" stroke="#52606d" stroke-width="1.5" marker-end="url(#a)"/>
+<text x="20" y="262" font-size="14" fill="#1f2933" text-anchor="start" font-weight="700">AI との接続</text>
+<rect x="20" y="276" width="200" height="62" rx="8" fill="#e6f5f0" stroke="#009E73" stroke-width="1.5"/>
+<text x="120.0" y="300" font-size="15" fill="#1f2933" text-anchor="middle" font-weight="700">意味定義と API 定義</text>
+<text x="120.0" y="322" font-size="13" fill="#52606d" text-anchor="middle">SAMM アスペクトモデル</text>
+<rect x="290" y="276" width="170" height="62" rx="8" fill="#f6f8fa" stroke="#9aa5b1" stroke-width="1.5"/>
+<text x="375.0" y="300" font-size="15" fill="#1f2933" text-anchor="middle" font-weight="700">チャットサーバ</text>
+<text x="375.0" y="322" font-size="13" fill="#52606d" text-anchor="middle">MCP ツールを生成</text>
+<rect x="530" y="276" width="210" height="62" rx="8" fill="#fcefe6" stroke="#D55E00" stroke-width="1.5"/>
+<text x="635.0" y="300" font-size="15" fill="#1f2933" text-anchor="middle" font-weight="700">AI アプリケーション</text>
+<text x="635.0" y="322" font-size="13" fill="#52606d" text-anchor="middle">MCP ツールを道具として使う</text>
+<line x1="222" y1="307" x2="288" y2="307" stroke="#52606d" stroke-width="1.5" marker-end="url(#a)"/>
+<line x1="462" y1="307" x2="528" y2="307" stroke="#52606d" stroke-width="1.5" marker-end="url(#a)"/>
+<text x="20" y="366" font-size="12.5" fill="#52606d" text-anchor="start">サンプルの RDF サーバーは、Apache Jena Fuseki に対して SPARQL クエリを実行する。</text>
+<text x="20" y="386" font-size="12.5" fill="#52606d" text-anchor="start">各要素の出典は、本文の表に示した。</text>
+</svg>

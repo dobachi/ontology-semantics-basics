@@ -1,0 +1,39 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 760 470" width="760" height="470" role="img" aria-label="Palantir の Ontology の例。航空業界のオブジェクト型とリンク型" font-family="'Noto Sans CJK JP','Hiragino Sans','Yu Gothic',sans-serif">
+<defs><marker id="a" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="8" markerHeight="8" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#52606d"/></marker></defs>
+<rect width="760" height="470" fill="#ffffff"/>
+<rect x="280" y="16" width="200" height="84" rx="8" fill="#fcefe6" stroke="#D55E00" stroke-width="1.5"/>
+<text x="380.0" y="40" font-size="14" fill="#1f2933" text-anchor="middle" font-weight="700">空港（Airport）</text>
+<text x="380.0" y="62" font-size="13" fill="#52606d" text-anchor="middle">例: JFK</text>
+<text x="380.0" y="81" font-size="13" fill="#52606d" text-anchor="middle">開港日、発着能力、緯度経度</text>
+<rect x="280" y="178" width="200" height="84" rx="8" fill="#fcefe6" stroke="#D55E00" stroke-width="1.5"/>
+<text x="380.0" y="202" font-size="14" fill="#1f2933" text-anchor="middle" font-weight="700">フライト（Flight）</text>
+<text x="380.0" y="224" font-size="13" fill="#52606d" text-anchor="middle">例: JFK 発 SFO 行</text>
+<text x="380.0" y="243" font-size="13" fill="#52606d" text-anchor="middle">出発、到着、乗客数</text>
+<rect x="20" y="178" width="200" height="84" rx="8" fill="#fcefe6" stroke="#D55E00" stroke-width="1.5"/>
+<text x="120.0" y="202" font-size="14" fill="#1f2933" text-anchor="middle" font-weight="700">遅延（Delay）</text>
+<text x="120.0" y="224" font-size="13" fill="#52606d" text-anchor="middle">例: 38 分の遅延</text>
+<text x="120.0" y="243" font-size="13" fill="#52606d" text-anchor="middle">時間、発着の別、原因</text>
+<rect x="540" y="178" width="200" height="84" rx="8" fill="#fcefe6" stroke="#D55E00" stroke-width="1.5"/>
+<text x="640.0" y="202" font-size="14" fill="#1f2933" text-anchor="middle" font-weight="700">航空会社（Airline）</text>
+<text x="640.0" y="224" font-size="13" fill="#52606d" text-anchor="middle">例: Skybourne Airlines</text>
+<text x="640.0" y="243" font-size="13" fill="#52606d" text-anchor="middle">本社、設立日、航空連合</text>
+<rect x="280" y="340" width="200" height="84" rx="8" fill="#fcefe6" stroke="#D55E00" stroke-width="1.5"/>
+<text x="380.0" y="364" font-size="14" fill="#1f2933" text-anchor="middle" font-weight="700">機材（Aircraft）</text>
+<text x="380.0" y="386" font-size="13" fill="#52606d" text-anchor="middle">例: Boeing 747</text>
+<text x="380.0" y="405" font-size="13" fill="#52606d" text-anchor="middle">就航日、座席数、航続距離</text>
+<line x1="360" y1="178" x2="360" y2="102" stroke="#52606d" stroke-width="1.5" marker-end="url(#a)"/>
+<text x="352" y="146" font-size="12.5" fill="#1f2933" text-anchor="end">出発地</text>
+<line x1="400" y1="178" x2="400" y2="102" stroke="#52606d" stroke-width="1.5" marker-end="url(#a)"/>
+<text x="408" y="146" font-size="12.5" fill="#1f2933" text-anchor="start">到着地</text>
+<line x1="280" y1="220" x2="222" y2="220" stroke="#52606d" stroke-width="1.5" marker-end="url(#a)"/>
+<text x="251" y="210" font-size="12.5" fill="#1f2933" text-anchor="middle">遅延</text>
+<line x1="480" y1="220" x2="538" y2="220" stroke="#52606d" stroke-width="1.5" marker-end="url(#a)"/>
+<text x="509" y="210" font-size="12.5" fill="#1f2933" text-anchor="middle">運航会社</text>
+<line x1="380" y1="262" x2="380" y2="338" stroke="#52606d" stroke-width="1.5" marker-end="url(#a)"/>
+<text x="388" y="304" font-size="12.5" fill="#1f2933" text-anchor="start">使用機材</text>
+<line x1="482" y1="74" x2="600" y2="176" stroke="#52606d" stroke-width="1.5" marker-end="url(#a)"/>
+<text x="556" y="116" font-size="12.5" fill="#1f2933" text-anchor="start">ハブ空港</text>
+<line x1="482" y1="374" x2="600" y2="264" stroke="#52606d" stroke-width="1.5" marker-end="url(#a)"/>
+<text x="556" y="332" font-size="12.5" fill="#1f2933" text-anchor="start">所有会社</text>
+<text x="20" y="454" font-size="12.5" fill="#52606d" text-anchor="start">箱がオブジェクト型、矢印がリンク型である。各箱の 3 行目はプロパティの例。</text>
+</svg>

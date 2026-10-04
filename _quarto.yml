@@ -1,0 +1,54 @@
+project:
+  type: default
+  output-dir: _output
+  render:
+    - index.qmd
+    - method.qmd
+
+lang: ja
+bibliography: _bib/bibliography.bib
+csl: templates/ieee.csl
+link-citations: true
+
+format:
+  html:
+    toc: true
+    toc-depth: 3
+    number-sections: true
+    theme: cosmo
+    embed-resources: true
+    tbl-cap-location: top
+    fig-cap-location: bottom
+
+  # PDF は調査報告と前提文書を別々のファイルに出力する（index.pdf と method.pdf）
+  pdf:
+    documentclass: scrartcl
+    pdf-engine: lualatex
+    papersize: a4
+    toc: true
+    toc-depth: 2
+    number-sections: true
+    colorlinks: true
+    geometry:
+      - margin=22mm
+    mainfont: "Noto Serif CJK JP"
+    CJKmainfont: "Noto Serif CJK JP"
+    CJKsansfont: "Noto Sans CJK JP"
+    CJKmonofont: "Noto Sans Mono CJK JP"
+    CJKoptions:
+      - BoldFont=Noto Sans CJK JP Bold
+    fig-pos: "H"
+    # selnolig（合字の抑制）は luatexja と衝突し、英語の引用符の箇所で
+    # 「bad argument #1 to 'char'」で落ちる。文書の先頭で無効にする
+    include-in-header:
+      text: |
+        \AtBeginDocument{\selnoligoff}
+    tbl-cap-location: top
+    fig-cap-location: bottom
+
+crossref:
+  fig-title: "図"
+  tbl-title: "表"
+  fig-prefix: "図"
+  tbl-prefix: "表"
+  title-delim: ":"

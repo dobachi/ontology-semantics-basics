@@ -1,0 +1,38 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 760 330" width="760" height="330" role="img" aria-label="OSI から Apache Ossie への経過" font-family="'Noto Sans CJK JP','Hiragino Sans','Yu Gothic',sans-serif">
+<defs><marker id="a" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="8" markerHeight="8" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#52606d"/></marker></defs>
+<rect width="760" height="330" fill="#ffffff"/>
+<line x1="90" y1="70" x2="525" y2="70" stroke="#7B4EA3" stroke-width="3"/>
+<line x1="525" y1="70" x2="710" y2="70" stroke="#D55E00" stroke-width="3"/>
+<text x="90" y="32" font-size="13" fill="#7B4EA3" text-anchor="start" font-weight="700">Open Semantic Interchange（OSI）</text>
+<text x="710" y="32" font-size="13" fill="#D55E00" text-anchor="end" font-weight="700">Apache Ossie (Incubating)</text>
+<circle cx="90" cy="70" r="6" fill="#ffffff" stroke="#7B4EA3" stroke-width="2.5"/>
+<text x="90" y="98" font-size="12.5" fill="#1f2933" text-anchor="middle" font-weight="700">2025-09-23</text>
+<text x="90" y="118" font-size="12" fill="#52606d" text-anchor="middle">Snowflake らが</text>
+<text x="90" y="135" font-size="12" fill="#52606d" text-anchor="middle">OSI を発表</text>
+<circle cx="235" cy="70" r="6" fill="#ffffff" stroke="#7B4EA3" stroke-width="2.5"/>
+<text x="235" y="98" font-size="12.5" fill="#1f2933" text-anchor="middle" font-weight="700">2026-01-27</text>
+<text x="235" y="118" font-size="12" fill="#52606d" text-anchor="middle">仕様の最初の版</text>
+<text x="235" y="135" font-size="12" fill="#52606d" text-anchor="middle">を公開</text>
+<circle cx="380" cy="70" r="6" fill="#ffffff" stroke="#7B4EA3" stroke-width="2.5"/>
+<text x="380" y="98" font-size="12.5" fill="#1f2933" text-anchor="middle" font-weight="700">2026-04-28</text>
+<text x="380" y="118" font-size="12" fill="#52606d" text-anchor="middle">コミュニティ更新</text>
+<text x="380" y="135" font-size="12" fill="#52606d" text-anchor="middle">参加者を列挙</text>
+<circle cx="525" cy="70" r="6" fill="#ffffff" stroke="#D55E00" stroke-width="2.5"/>
+<text x="525" y="98" font-size="12.5" fill="#1f2933" text-anchor="middle" font-weight="700">2026-06-22</text>
+<text x="525" y="118" font-size="12" fill="#52606d" text-anchor="middle">Apache Incubator で</text>
+<text x="525" y="135" font-size="12" fill="#52606d" text-anchor="middle">インキュベーション開始</text>
+<circle cx="670" cy="70" r="6" fill="#ffffff" stroke="#D55E00" stroke-width="2.5"/>
+<text x="670" y="98" font-size="12.5" fill="#1f2933" text-anchor="middle" font-weight="700">2026-07-10</text>
+<text x="670" y="118" font-size="12" fill="#52606d" text-anchor="middle">Apache Ossie への</text>
+<text x="670" y="135" font-size="12" fill="#52606d" text-anchor="middle">改称を公表</text>
+<text x="20" y="186" font-size="13.5" fill="#1f2933" text-anchor="start" font-weight="700">仕様の説明は、出どころによって違う</text>
+<rect x="20" y="200" width="350" height="84" rx="8" fill="#f1ebf7" stroke="#7B4EA3" stroke-width="1.5"/>
+<text x="195.0" y="224" font-size="13" fill="#1f2933" text-anchor="middle" font-weight="700">Apache Incubator のステータスページ</text>
+<text x="195.0" y="246" font-size="13" fill="#52606d" text-anchor="middle">業務指標、ディメンション、それらの関係</text>
+<text x="195.0" y="265" font-size="13" fill="#52606d" text-anchor="middle">オントロジーには触れていない</text>
+<rect x="390" y="200" width="350" height="84" rx="8" fill="#fcefe6" stroke="#D55E00" stroke-width="1.5"/>
+<text x="565.0" y="224" font-size="13" fill="#1f2933" text-anchor="middle" font-weight="700">プロジェクトのブログ記事</text>
+<text x="565.0" y="246" font-size="13" fill="#52606d" text-anchor="middle">セマンティックレイヤとオントロジーの</text>
+<text x="565.0" y="265" font-size="13" fill="#52606d" text-anchor="middle">両方のためのオープン仕様</text>
+<text x="20" y="312" font-size="12" fill="#52606d" text-anchor="start">横軸は出来事の順序を示す。間隔は日数に比例しない。</text>
+</svg>

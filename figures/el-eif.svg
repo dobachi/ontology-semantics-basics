@@ -1,0 +1,32 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 760 330" width="760" height="330" role="img" aria-label="欧州相互運用性フレームワークの相互運用性モデル" font-family="'Noto Sans CJK JP','Hiragino Sans','Yu Gothic',sans-serif">
+<defs><marker id="a" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="8" markerHeight="8" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#52606d"/></marker></defs>
+<rect width="760" height="330" fill="#ffffff"/>
+<rect x="20" y="16" width="470" height="264" rx="8" fill="#f6f8fa" stroke="#9aa5b1" stroke-width="1.5"/>
+<text x="34" y="40" font-size="13.5" fill="#1f2933" text-anchor="start" font-weight="700">相互運用性のガバナンス</text>
+<text x="34" y="58" font-size="11.5" fill="#52606d" text-anchor="start">Interoperability Governance</text>
+<rect x="40" y="72" width="290" height="40" rx="6" fill="#ffffff" stroke="#9aa5b1" stroke-width="1.2"/>
+<text x="54" y="97" font-size="14" fill="#1f2933" text-anchor="start">法的な相互運用性</text>
+<text x="318" y="97" font-size="11.5" fill="#52606d" text-anchor="end">Legal</text>
+<rect x="40" y="122" width="290" height="40" rx="6" fill="#ffffff" stroke="#9aa5b1" stroke-width="1.2"/>
+<text x="54" y="147" font-size="14" fill="#1f2933" text-anchor="start">組織的な相互運用性</text>
+<text x="318" y="147" font-size="11.5" fill="#52606d" text-anchor="end">Organisational</text>
+<rect x="40" y="172" width="290" height="40" rx="6" fill="#e6f5f0" stroke="#009E73" stroke-width="2.5"/>
+<text x="54" y="197" font-size="14" fill="#1f2933" text-anchor="start" font-weight="700">意味的な相互運用性</text>
+<text x="318" y="197" font-size="11.5" fill="#52606d" text-anchor="end">Semantic</text>
+<rect x="40" y="222" width="290" height="40" rx="6" fill="#ffffff" stroke="#9aa5b1" stroke-width="1.2"/>
+<text x="54" y="247" font-size="14" fill="#1f2933" text-anchor="start">技術的な相互運用性</text>
+<text x="318" y="247" font-size="11.5" fill="#52606d" text-anchor="end">Technical</text>
+<rect x="342" y="72" width="134" height="190" rx="6" fill="#e8f2f9" stroke="#0072B2" stroke-width="1.5"/>
+<text x="409" y="138" font-size="13" fill="#1f2933" text-anchor="middle" font-weight="700">統合された</text>
+<text x="409" y="157" font-size="13" fill="#1f2933" text-anchor="middle" font-weight="700">公共サービスの</text>
+<text x="409" y="176" font-size="13" fill="#1f2933" text-anchor="middle" font-weight="700">ガバナンス</text>
+<text x="409" y="206" font-size="11" fill="#52606d" text-anchor="middle">Integrated Public</text>
+<text x="409" y="221" font-size="11" fill="#52606d" text-anchor="middle">Service Governance</text>
+<text x="510" y="150" font-size="13" fill="#009E73" text-anchor="start" font-weight="700">意味的な相互運用性とは</text>
+<text x="510" y="174" font-size="12.5" fill="#1f2933" text-anchor="start">交換されるデータと情報の</text>
+<text x="510" y="192" font-size="12.5" fill="#1f2933" text-anchor="start">正確な形式と意味が、</text>
+<text x="510" y="210" font-size="12.5" fill="#1f2933" text-anchor="start">やり取りを通じて保たれ、</text>
+<text x="510" y="228" font-size="12.5" fill="#1f2933" text-anchor="start">理解されること</text>
+<text x="510" y="258" font-size="12.5" fill="#52606d" text-anchor="start">この報告書が扱う層である</text>
+<text x="20" y="308" font-size="12" fill="#52606d" text-anchor="start">4 層と、4 層を横断する要素、背景となる層からなる。日本語の名称は筆者の訳である。</text>
+</svg>

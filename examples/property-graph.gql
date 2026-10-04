@@ -1,0 +1,8 @@
+// ノードと辺に、ラベルとプロパティを直接持たせる
+INSERT (:Part {id: 'P-100', name: '六角ボルト M8', weight_g: 12})
+       -[:SUPPLIED_BY {since: 2021}]->
+       (:Supplier {id: 'S-01', name: '東和精工'})
+
+// 供給者ごとの部品を調べる
+MATCH (p:Part)-[:SUPPLIED_BY]->(s:Supplier)
+RETURN p.name, s.name

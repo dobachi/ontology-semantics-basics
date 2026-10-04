@@ -1,0 +1,38 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 760 410" width="760" height="410" role="img" aria-label="連続体と意味の 4 段階の対応" font-family="'Noto Sans CJK JP','Hiragino Sans','Yu Gothic',sans-serif">
+<defs><marker id="a" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="8" markerHeight="8" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#52606d"/></marker></defs>
+<rect width="760" height="410" fill="#ffffff"/>
+<text x="30" y="30" font-size="13" fill="#52606d" text-anchor="start">先行する整理: 成果物の種類を、形式的な順に並べる</text>
+<rect x="30" y="44" width="168" height="62" rx="4" fill="#f6f8fa" stroke="#9aa5b1" stroke-width="1.2"/>
+<text x="114.0" y="69" font-size="13" fill="#1f2933" text-anchor="middle" font-weight="700">用語集、データ辞書</text>
+<text x="114.0" y="90" font-size="12.5" fill="#52606d" text-anchor="middle">人が読む説明</text>
+<rect x="205" y="44" width="168" height="62" rx="4" fill="#f6f8fa" stroke="#9aa5b1" stroke-width="1.2"/>
+<text x="289.0" y="69" font-size="13" fill="#1f2933" text-anchor="middle" font-weight="700">シソーラス、分類</text>
+<text x="289.0" y="90" font-size="12.5" fill="#52606d" text-anchor="middle">広い語と狭い語</text>
+<rect x="380" y="44" width="168" height="62" rx="4" fill="#f6f8fa" stroke="#9aa5b1" stroke-width="1.2"/>
+<text x="464.0" y="69" font-size="13" fill="#1f2933" text-anchor="middle" font-weight="700">スキーマ、データモデル</text>
+<text x="464.0" y="90" font-size="12.5" fill="#52606d" text-anchor="middle">項目と型</text>
+<rect x="555" y="44" width="168" height="62" rx="4" fill="#f6f8fa" stroke="#9aa5b1" stroke-width="1.2"/>
+<text x="639.0" y="69" font-size="13" fill="#1f2933" text-anchor="middle" font-weight="700">形式的なオントロジー</text>
+<text x="639.0" y="90" font-size="12.5" fill="#52606d" text-anchor="middle">論理による定義</text>
+<text x="723" y="352" font-size="13" fill="#009E73" text-anchor="end" font-weight="700">意味の 4 段階: 機械にできることの順に並べる</text>
+<rect x="30" y="270" width="168" height="62" rx="4" fill="#e6f5f0" stroke="#009E73" stroke-width="1.5"/>
+<text x="114.0" y="295" font-size="13" fill="#1f2933" text-anchor="middle" font-weight="700">1 形を検査できる</text>
+<text x="114.0" y="316" font-size="12.5" fill="#52606d" text-anchor="middle">JSON Schema など</text>
+<rect x="205" y="270" width="168" height="62" rx="4" fill="#e6f5f0" stroke="#009E73" stroke-width="1.5" stroke-dasharray="6 4"/>
+<text x="289.0" y="295" font-size="13" fill="#1f2933" text-anchor="middle" font-weight="700">2 同じものだと分かる</text>
+<text x="289.0" y="316" font-size="12.5" fill="#52606d" text-anchor="middle">RDF と共有の語彙</text>
+<rect x="380" y="270" width="168" height="62" rx="4" fill="#e6f5f0" stroke="#009E73" stroke-width="1.5"/>
+<text x="464.0" y="295" font-size="13" fill="#1f2933" text-anchor="middle" font-weight="700">3 用語の関係をたどれる</text>
+<text x="464.0" y="316" font-size="12.5" fill="#52606d" text-anchor="middle">SKOS</text>
+<rect x="555" y="270" width="168" height="62" rx="4" fill="#e6f5f0" stroke="#009E73" stroke-width="1.5"/>
+<text x="639.0" y="295" font-size="13" fill="#1f2933" text-anchor="middle" font-weight="700">4 定義から導ける</text>
+<text x="639.0" y="316" font-size="12.5" fill="#52606d" text-anchor="middle">RDF Schema、OWL</text>
+<line x1="289.0" y1="108" x2="464.0" y2="268" stroke="#52606d" stroke-width="1.6" marker-end="url(#a)"/>
+<line x1="464.0" y1="108" x2="114.0" y2="268" stroke="#52606d" stroke-width="1.6" marker-end="url(#a)"/>
+<line x1="639.0" y1="108" x2="639.0" y2="268" stroke="#52606d" stroke-width="1.6" marker-end="url(#a)"/>
+<text x="114.0" y="128" font-size="12.5" fill="#52606d" text-anchor="middle">段の手前</text>
+<text x="114.0" y="145" font-size="12.5" fill="#52606d" text-anchor="middle">機械は中身を扱えない</text>
+<text x="289.0" y="352" font-size="12.5" fill="#52606d" text-anchor="middle">連続体には、</text>
+<text x="289.0" y="369" font-size="12.5" fill="#52606d" text-anchor="middle">対応するものがない</text>
+<text x="30" y="398" font-size="12.5" fill="#52606d" text-anchor="start">スキーマとシソーラスの順が入れ替わる。対応は筆者の整理である。</text>
+</svg>

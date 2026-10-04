@@ -1,0 +1,32 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 760 380" width="760" height="380" role="img" aria-label="データモデルとメタデータの標準が、何をそろえるか" font-family="'Noto Sans CJK JP','Hiragino Sans','Yu Gothic',sans-serif">
+<defs><marker id="a" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="8" markerHeight="8" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#52606d"/></marker></defs>
+<rect width="760" height="380" fill="#ffffff"/>
+<rect x="20" y="16" width="350" height="300" rx="8" fill="#ffffff" stroke="#0072B2" stroke-width="1.5"/>
+<rect x="390" y="16" width="350" height="300" rx="8" fill="#ffffff" stroke="#009E73" stroke-width="1.5"/>
+<text x="36" y="42" font-size="15" fill="#0072B2" text-anchor="start" font-weight="700">形をそろえる</text>
+<text x="354" y="42" font-size="12" fill="#52606d" text-anchor="end">1 段目に関係する</text>
+<text x="406" y="42" font-size="15" fill="#009E73" text-anchor="start" font-weight="700">言葉をそろえる</text>
+<text x="724" y="42" font-size="12" fill="#52606d" text-anchor="end">2 段目に関係する</text>
+<rect x="36" y="56" width="318" height="66" rx="6" fill="#e8f2f9" stroke="#0072B2" stroke-width="1.2"/>
+<text x="48" y="77" font-size="13" fill="#1f2933" text-anchor="start" font-weight="700">データの形</text>
+<text x="48" y="98" font-size="12.5" fill="#52606d" text-anchor="start">関係モデル（1970 年）</text>
+<text x="48" y="117" font-size="12.5" fill="#52606d" text-anchor="start">実体関連モデル（1976 年）</text>
+<rect x="36" y="138" width="318" height="66" rx="6" fill="#e8f2f9" stroke="#0072B2" stroke-width="1.2"/>
+<text x="48" y="159" font-size="13" fill="#1f2933" text-anchor="start" font-weight="700">文書の形</text>
+<text x="48" y="180" font-size="12.5" fill="#52606d" text-anchor="start">XML Schema（2001 年に W3C 勧告）</text>
+<text x="48" y="199" font-size="12.5" fill="#52606d" text-anchor="start">JSON Schema</text>
+<rect x="36" y="220" width="318" height="47" rx="6" fill="#e8f2f9" stroke="#0072B2" stroke-width="1.2"/>
+<text x="48" y="241" font-size="13" fill="#1f2933" text-anchor="start" font-weight="700">モデルの定義のしかた</text>
+<text x="48" y="262" font-size="12.5" fill="#52606d" text-anchor="start">OMG の MOF</text>
+<rect x="406" y="56" width="318" height="47" rx="6" fill="#e6f5f0" stroke="#009E73" stroke-width="1.2"/>
+<text x="418" y="77" font-size="13" fill="#1f2933" text-anchor="start" font-weight="700">データについての情報の語彙</text>
+<text x="418" y="98" font-size="12.5" fill="#52606d" text-anchor="start">ダブリンコア（2003 年に ISO 15836）</text>
+<rect x="406" y="138" width="318" height="47" rx="6" fill="#e6f5f0" stroke="#009E73" stroke-width="1.2"/>
+<text x="418" y="159" font-size="13" fill="#1f2933" text-anchor="start" font-weight="700">Web ページ向けの語彙</text>
+<text x="418" y="180" font-size="12.5" fill="#52606d" text-anchor="start">schema.org（2011 年に発表）</text>
+<rect x="406" y="220" width="318" height="47" rx="6" fill="#e6f5f0" stroke="#009E73" stroke-width="1.2"/>
+<text x="418" y="241" font-size="13" fill="#1f2933" text-anchor="start" font-weight="700">データに用いる用語</text>
+<text x="418" y="262" font-size="12.5" fill="#52606d" text-anchor="start">共通語彙基盤（日本、IMI の一部）</text>
+<text x="20" y="344" font-size="12.5" fill="#1f2933" text-anchor="start">左は項目の並びや型を決める。右は項目の名前が何を指すかを決める。</text>
+<text x="20" y="364" font-size="12" fill="#52606d" text-anchor="start">左右の分け方と、意味の 4 段階との対応は筆者の整理である。</text>
+</svg>

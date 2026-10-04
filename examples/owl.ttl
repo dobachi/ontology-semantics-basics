@@ -1,0 +1,17 @@
+@prefix ex:   <https://example.org/> .
+@prefix owl:  <http://www.w3.org/2002/07/owl#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+
+ex:suppliedBy  a owl:ObjectProperty ;
+               owl:inverseOf  ex:supplies .
+
+# 「供給者が 1 つ以上あるもの」を「調達品」と定義する
+ex:ProcuredItem  a owl:Class ;
+    owl:equivalentClass [
+        a owl:Restriction ;
+        owl:onProperty      ex:suppliedBy ;
+        owl:someValuesFrom  ex:Supplier
+    ] .
+
+# 部品と供給者は重ならない
+ex:Part  owl:disjointWith  ex:Supplier .

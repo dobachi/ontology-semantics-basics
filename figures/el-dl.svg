@@ -1,0 +1,21 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 760 260" width="760" height="260" role="img" aria-label="記述論理による自動分類" font-family="'Noto Sans CJK JP','Hiragino Sans','Yu Gothic',sans-serif">
+<defs><marker id="a" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="8" markerHeight="8" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#52606d"/></marker></defs>
+<rect width="760" height="260" fill="#ffffff"/>
+<rect x="30" y="30" width="330" height="80" rx="8" fill="#fcefe6" stroke="#D55E00" stroke-width="1.5"/>
+<text x="195.0" y="54" font-size="15" fill="#1f2933" text-anchor="middle" font-weight="700">定義</text>
+<text x="195.0" y="76" font-size="13" fill="#52606d" text-anchor="middle">調達品 ＝</text>
+<text x="195.0" y="95" font-size="13" fill="#52606d" text-anchor="middle">供給者を 1 つ以上持つもの</text>
+<rect x="30" y="140" width="330" height="80" rx="8" fill="#f6f8fa" stroke="#9aa5b1" stroke-width="1.5"/>
+<text x="195.0" y="164" font-size="15" fill="#1f2933" text-anchor="middle" font-weight="700">データ</text>
+<text x="195.0" y="186" font-size="13" fill="#52606d" text-anchor="middle">P-100 の供給者は S-01 である</text>
+<text x="195.0" y="205" font-size="13" fill="#52606d" text-anchor="middle">S-01 は供給者である</text>
+<rect x="420" y="85" width="120" height="62" rx="8" fill="#f6f8fa" stroke="#9aa5b1" stroke-width="1.5"/>
+<text x="480.0" y="109" font-size="15" fill="#1f2933" text-anchor="middle" font-weight="700">分類</text>
+<rect x="590" y="85" width="150" height="62" rx="8" fill="#fcefe6" stroke="#D55E00" stroke-width="1.5"/>
+<text x="665.0" y="109" font-size="15" fill="#1f2933" text-anchor="middle" font-weight="700">結果</text>
+<text x="665.0" y="131" font-size="13" fill="#52606d" text-anchor="middle">P-100 は調達品</text>
+<line x1="360" y1="70" x2="420" y2="106" stroke="#52606d" stroke-width="1.5" marker-end="url(#a)"/>
+<line x1="360" y1="180" x2="420" y2="126" stroke="#52606d" stroke-width="1.5" marker-end="url(#a)"/>
+<line x1="540" y1="116" x2="590" y2="116" stroke="#52606d" stroke-width="1.5" marker-end="url(#a)"/>
+<text x="30" y="248" font-size="13" fill="#52606d" text-anchor="start">「調達品である」とはどこにも書いていないが、定義から計算で導ける。</text>
+</svg>

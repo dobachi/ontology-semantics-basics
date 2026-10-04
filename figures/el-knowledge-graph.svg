@@ -1,0 +1,22 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 760 210" width="760" height="210" role="img" aria-label="知識グラフと GraphRAG の流れ" font-family="'Noto Sans CJK JP','Hiragino Sans','Yu Gothic',sans-serif">
+<defs><marker id="a" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="8" markerHeight="8" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#52606d"/></marker></defs>
+<rect width="760" height="210" fill="#ffffff"/>
+<rect x="20" y="50" width="150" height="80" rx="8" fill="#f6f8fa" stroke="#9aa5b1" stroke-width="1.5"/>
+<text x="95.0" y="74" font-size="15" fill="#1f2933" text-anchor="middle" font-weight="700">文書</text>
+<text x="95.0" y="96" font-size="13" fill="#52606d" text-anchor="middle">報告書、記録など</text>
+<rect x="215" y="50" width="150" height="80" rx="8" fill="#f6f8fa" stroke="#9aa5b1" stroke-width="1.5"/>
+<text x="290.0" y="74" font-size="15" fill="#1f2933" text-anchor="middle" font-weight="700">抽出</text>
+<text x="290.0" y="96" font-size="13" fill="#52606d" text-anchor="middle">言語モデルが</text>
+<text x="290.0" y="115" font-size="13" fill="#52606d" text-anchor="middle">事物と関係を取り出す</text>
+<rect x="410" y="50" width="150" height="80" rx="8" fill="#fcefe6" stroke="#D55E00" stroke-width="1.5"/>
+<text x="485.0" y="74" font-size="15" fill="#1f2933" text-anchor="middle" font-weight="700">知識グラフ</text>
+<text x="485.0" y="96" font-size="13" fill="#52606d" text-anchor="middle">事物と関係の網</text>
+<rect x="605" y="50" width="140" height="80" rx="8" fill="#f6f8fa" stroke="#9aa5b1" stroke-width="1.5"/>
+<text x="675.0" y="74" font-size="15" fill="#1f2933" text-anchor="middle" font-weight="700">回答</text>
+<text x="675.0" y="96" font-size="13" fill="#52606d" text-anchor="middle">グラフを手がかりに</text>
+<text x="675.0" y="115" font-size="13" fill="#52606d" text-anchor="middle">言語モデルが答える</text>
+<line x1="170" y1="90" x2="215" y2="90" stroke="#52606d" stroke-width="1.5" marker-end="url(#a)"/>
+<line x1="365" y1="90" x2="410" y2="90" stroke="#52606d" stroke-width="1.5" marker-end="url(#a)"/>
+<line x1="560" y1="90" x2="605" y2="90" stroke="#52606d" stroke-width="1.5" marker-end="url(#a)"/>
+<text x="20" y="180" font-size="13" fill="#52606d" text-anchor="start">知識グラフは、事物を点、関係を線として持つデータの網である。</text>
+</svg>

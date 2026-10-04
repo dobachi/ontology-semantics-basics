@@ -1,0 +1,41 @@
+# 調査報告（HTML）を GitHub Pages に公開する。
+# 図（figures/*.svg）、6 章（_elements.qmd）、説明ペーパー（deck/*.pptx）は生成物だが、
+# リポジトリに入れてあるので、ここでは作り直さない。作るのは pptx の埋め込みリンクと HTML だけである。
+name: Publish to GitHub Pages
+
+on:
+  push:
+    branches: [main]
+  workflow_dispatch:
+
+permissions:
+  contents: read
+  pages: write
+  id-token: write
+
+concurrency:
+  group: pages
+  cancel-in-progress: true
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: quarto-dev/quarto-actions/setup@v2
+      - name: Embed the deck download link
+        run: python3 scripts/build_deck_link.py
+      - name: Render HTML
+        run: quarto render --to html
+      - uses: actions/upload-pages-artifact@v3
+        with:
+          path: _output
+  deploy:
+    needs: build
+    runs-on: ubuntu-latest
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    steps:
+      - id: deployment
+        uses: actions/deploy-pages@v4

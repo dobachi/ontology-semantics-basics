@@ -1,0 +1,36 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 760 450" width="760" height="450" role="img" aria-label="意味の三角形と意味の 4 段階の対応" font-family="'Noto Sans CJK JP','Hiragino Sans','Yu Gothic',sans-serif">
+<defs><marker id="a" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="8" markerHeight="8" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#52606d"/></marker></defs>
+<rect width="760" height="450" fill="#ffffff"/>
+<line x1="220" y1="300" x2="320" y2="140" stroke="#009E73" stroke-width="4"/>
+<line x1="440" y1="140" x2="540" y2="300" stroke="#9aa5b1" stroke-width="1.8" stroke-dasharray="6 5"/>
+<line x1="274" y1="340" x2="486" y2="340" stroke="#9aa5b1" stroke-width="1.8" stroke-dasharray="6 5"/>
+<rect x="260" y="52" width="240" height="88" rx="8" fill="#fcefe6" stroke="#D55E00" stroke-width="1.5"/>
+<text x="380.0" y="76" font-size="15" fill="#1f2933" text-anchor="middle" font-weight="700">概念</text>
+<text x="380.0" y="98" font-size="13" fill="#52606d" text-anchor="middle">「部品を供給する会社」</text>
+<text x="380.0" y="117" font-size="13" fill="#52606d" text-anchor="middle">という考え</text>
+<rect x="70" y="300" width="200" height="80" rx="8" fill="#e8f2f9" stroke="#0072B2" stroke-width="1.5"/>
+<text x="170.0" y="324" font-size="15" fill="#1f2933" text-anchor="middle" font-weight="700">記号</text>
+<text x="170.0" y="346" font-size="13" fill="#52606d" text-anchor="middle">supplier_id、S-01</text>
+<rect x="490" y="300" width="200" height="80" rx="8" fill="#f6f8fa" stroke="#9aa5b1" stroke-width="1.5"/>
+<text x="590.0" y="324" font-size="15" fill="#1f2933" text-anchor="middle" font-weight="700">対象</text>
+<text x="590.0" y="346" font-size="13" fill="#52606d" text-anchor="middle">実在する会社</text>
+<circle cx="70" cy="300" r="15" fill="#1f2933"/>
+<text x="70" y="305" font-size="14" fill="#ffffff" text-anchor="middle" font-weight="700">1</text>
+<text x="70" y="404" font-size="13" fill="#1f2933" text-anchor="start" font-weight="700">1 段目: 形を検査できる</text>
+<text x="70" y="423" font-size="12.5" fill="#52606d" text-anchor="start">記号の形だけを決める</text>
+<circle cx="250" cy="214" r="15" fill="#1f2933"/>
+<text x="250" y="219" font-size="14" fill="#ffffff" text-anchor="middle" font-weight="700">2</text>
+<text x="232" y="200" font-size="13" fill="#1f2933" text-anchor="end" font-weight="700">2 段目: 同じものだと分かる</text>
+<text x="232" y="219" font-size="12.5" fill="#52606d" text-anchor="end">記号がどの概念を表すかを</text>
+<text x="232" y="237" font-size="12.5" fill="#52606d" text-anchor="end">共通の識別子で固定する</text>
+<circle cx="260" cy="52" r="15" fill="#1f2933"/>
+<text x="260" y="57" font-size="14" fill="#ffffff" text-anchor="middle" font-weight="700">3</text>
+<circle cx="500" cy="52" r="15" fill="#1f2933"/>
+<text x="500" y="57" font-size="14" fill="#ffffff" text-anchor="middle" font-weight="700">4</text>
+<text x="246" y="32" font-size="13" fill="#1f2933" text-anchor="end" font-weight="700">3 段目: 用語の関係をたどれる</text>
+<text x="246" y="51" font-size="12.5" fill="#52606d" text-anchor="end">概念どうしの広い狭いを書く</text>
+<text x="522" y="32" font-size="13" fill="#1f2933" text-anchor="start" font-weight="700">4 段目: 定義から導ける</text>
+<text x="522" y="51" font-size="12.5" fill="#52606d" text-anchor="start">概念の定義を書き、推論する</text>
+<text x="532" y="214" font-size="12.5" fill="#52606d" text-anchor="start">どの段でも、機械には渡らない</text>
+<text x="532" y="232" font-size="12.5" fill="#52606d" text-anchor="start">（記録が現実と合っているか）</text>
+</svg>

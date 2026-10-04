@@ -1,0 +1,47 @@
+version: 0.2.0.dev0
+name: procurement
+description: 部品の調達に関する分析モデル
+
+datasets:
+  - name: part
+    source: erp.public.part
+    primary_key: [part_id]
+    fields:
+      - name: part_id
+        expression:
+          dialects:
+            - dialect: ANSI_SQL
+              expression: part_id
+      - name: weight_g
+        expression:
+          dialects:
+            - dialect: ANSI_SQL
+              expression: weight_g
+  - name: supplier
+    source: erp.public.supplier
+    primary_key: [supplier_id]
+    fields:
+      - name: supplier_name
+        expression:
+          dialects:
+            - dialect: ANSI_SQL
+              expression: name
+
+relationships:
+  - name: part_to_supplier
+    from: part
+    to: supplier
+    from_columns: [supplier_id]
+    to_columns: [supplier_id]
+
+metrics:
+  - name: part_count
+    description: 部品の点数
+    expression:
+      dialects:
+        - dialect: ANSI_SQL
+          expression: COUNT(DISTINCT part.part_id)
+    ai_context:
+      synonyms:
+        - "部品点数"
+        - "品目数"

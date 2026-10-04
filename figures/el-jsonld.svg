@@ -1,0 +1,21 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 760 230" width="760" height="230" role="img" aria-label="JSON-LD の仕組み" font-family="'Noto Sans CJK JP','Hiragino Sans','Yu Gothic',sans-serif">
+<defs><marker id="a" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="8" markerHeight="8" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#52606d"/></marker></defs>
+<rect width="760" height="230" fill="#ffffff"/>
+<rect x="30" y="30" width="220" height="80" rx="8" fill="#e6f5f0" stroke="#009E73" stroke-width="1.5"/>
+<text x="140.0" y="54" font-size="15" fill="#1f2933" text-anchor="middle" font-weight="700">ふつうの JSON</text>
+<text x="44" y="76" font-size="13" fill="#1f2933" text-anchor="start" font-family="'Noto Sans Mono CJK JP','DejaVu Sans Mono',monospace">"name": "六角ボルト M8"</text>
+<text x="44" y="95" font-size="13" fill="#1f2933" text-anchor="start" font-family="'Noto Sans Mono CJK JP','DejaVu Sans Mono',monospace">"suppliedBy": "ex:S-01"</text>
+<rect x="30" y="130" width="220" height="80" rx="8" fill="#e6f5f0" stroke="#009E73" stroke-width="1.5"/>
+<text x="140.0" y="154" font-size="15" fill="#1f2933" text-anchor="middle" font-weight="700">@context</text>
+<text x="44" y="176" font-size="13" fill="#1f2933" text-anchor="start" font-family="'Noto Sans Mono CJK JP','DejaVu Sans Mono',monospace">"name": "ex:name"</text>
+<text x="44" y="195" font-size="13" fill="#1f2933" text-anchor="start" font-family="'Noto Sans Mono CJK JP','DejaVu Sans Mono',monospace">"suppliedBy": "ex:suppliedBy"</text>
+<rect x="330" y="85" width="110" height="70" rx="8" fill="#f6f8fa" stroke="#9aa5b1" stroke-width="1.5"/>
+<text x="385.0" y="109" font-size="15" fill="#1f2933" text-anchor="middle" font-weight="700">読み替え</text>
+<rect x="510" y="60" width="230" height="120" rx="8" fill="#e6f5f0" stroke="#009E73" stroke-width="1.5"/>
+<text x="625.0" y="84" font-size="15" fill="#1f2933" text-anchor="middle" font-weight="700">RDF のトリプル</text>
+<text x="524" y="106" font-size="13" fill="#1f2933" text-anchor="start" font-family="'Noto Sans Mono CJK JP','DejaVu Sans Mono',monospace">ex:P-100 ex:name ...</text>
+<text x="524" y="125" font-size="13" fill="#1f2933" text-anchor="start" font-family="'Noto Sans Mono CJK JP','DejaVu Sans Mono',monospace">ex:P-100 ex:suppliedBy ex:S-01</text>
+<line x1="250" y1="70" x2="330" y2="105" stroke="#52606d" stroke-width="1.5" marker-end="url(#a)"/>
+<line x1="250" y1="170" x2="330" y2="135" stroke="#52606d" stroke-width="1.5" marker-end="url(#a)"/>
+<line x1="440" y1="120" x2="510" y2="120" stroke="#52606d" stroke-width="1.5" marker-end="url(#a)"/>
+</svg>

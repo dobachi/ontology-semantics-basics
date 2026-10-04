@@ -1,0 +1,23 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 760 350" width="760" height="350" role="img" aria-label="意味の 4 段階。機械が意味についてできることが、段を上がるごとに増える" font-family="'Noto Sans CJK JP','Hiragino Sans','Yu Gothic',sans-serif">
+<defs><marker id="a" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="8" markerHeight="8" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#52606d"/></marker></defs>
+<rect width="760" height="350" fill="#ffffff"/>
+<rect x="30" y="210" width="170" height="80" fill="#dcefe8" stroke="#009E73" stroke-width="1.5"/>
+<text x="42" y="234" font-size="12.5" fill="#1f2933" text-anchor="start">1 段目</text>
+<text x="42" y="256" font-size="14.5" fill="#1f2933" text-anchor="start" font-weight="700">形を検査できる</text>
+<text x="42" y="278" font-size="12.5" fill="#1f2933" text-anchor="start">JSON Schema など</text>
+<rect x="208" y="148" width="170" height="142" fill="#b9e0d1" stroke="#009E73" stroke-width="1.5"/>
+<text x="220" y="172" font-size="12.5" fill="#1f2933" text-anchor="start">2 段目</text>
+<text x="220" y="194" font-size="14.5" fill="#1f2933" text-anchor="start" font-weight="700">同じものだと分かる</text>
+<text x="220" y="216" font-size="12.5" fill="#1f2933" text-anchor="start">RDF と共有語彙</text>
+<rect x="386" y="86" width="170" height="204" fill="#8fcfb7" stroke="#009E73" stroke-width="1.5"/>
+<text x="398" y="110" font-size="12.5" fill="#1f2933" text-anchor="start">3 段目</text>
+<text x="398" y="132" font-size="14.5" fill="#1f2933" text-anchor="start" font-weight="700">用語の関係をたどれる</text>
+<text x="398" y="154" font-size="12.5" fill="#1f2933" text-anchor="start">SKOS</text>
+<rect x="564" y="24" width="170" height="266" fill="#5fbc9a" stroke="#009E73" stroke-width="1.5"/>
+<text x="576" y="48" font-size="12.5" fill="#1f2933" text-anchor="start">4 段目</text>
+<text x="576" y="70" font-size="14.5" fill="#1f2933" text-anchor="start" font-weight="700">定義から導ける</text>
+<text x="576" y="92" font-size="12.5" fill="#1f2933" text-anchor="start">RDF Schema、OWL</text>
+<line x1="20" y1="290" x2="750" y2="290" stroke="#52606d" stroke-width="1.5"/>
+<line x1="30" y1="318" x2="730" y2="318" stroke="#52606d" stroke-width="1.5" marker-end="url(#a)"/>
+<text x="380" y="340" font-size="13" fill="#52606d" text-anchor="middle">機械に渡す意味が増える</text>
+</svg>

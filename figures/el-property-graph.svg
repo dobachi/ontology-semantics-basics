@@ -1,0 +1,17 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 760 230" width="760" height="230" role="img" aria-label="プロパティグラフの例" font-family="'Noto Sans CJK JP','Hiragino Sans','Yu Gothic',sans-serif">
+<defs><marker id="a" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="8" markerHeight="8" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#52606d"/></marker></defs>
+<rect width="760" height="230" fill="#ffffff"/>
+<rect x="40" y="50" width="220" height="110" rx="8" fill="#e8f2f9" stroke="#0072B2" stroke-width="1.5"/>
+<text x="150.0" y="74" font-size="15" fill="#1f2933" text-anchor="middle" font-weight="700">:Part</text>
+<text x="54" y="96" font-size="13" fill="#1f2933" text-anchor="start" font-family="'Noto Sans Mono CJK JP','DejaVu Sans Mono',monospace">id: 'P-100'</text>
+<text x="54" y="115" font-size="13" fill="#1f2933" text-anchor="start" font-family="'Noto Sans Mono CJK JP','DejaVu Sans Mono',monospace">name: '六角ボルト M8'</text>
+<text x="54" y="134" font-size="13" fill="#1f2933" text-anchor="start" font-family="'Noto Sans Mono CJK JP','DejaVu Sans Mono',monospace">weight_g: 12</text>
+<rect x="500" y="50" width="220" height="110" rx="8" fill="#e8f2f9" stroke="#0072B2" stroke-width="1.5"/>
+<text x="610.0" y="74" font-size="15" fill="#1f2933" text-anchor="middle" font-weight="700">:Supplier</text>
+<text x="514" y="96" font-size="13" fill="#1f2933" text-anchor="start" font-family="'Noto Sans Mono CJK JP','DejaVu Sans Mono',monospace">id: 'S-01'</text>
+<text x="514" y="115" font-size="13" fill="#1f2933" text-anchor="start" font-family="'Noto Sans Mono CJK JP','DejaVu Sans Mono',monospace">name: '東和精工'</text>
+<line x1="260" y1="105" x2="500" y2="105" stroke="#52606d" stroke-width="1.5" marker-end="url(#a)"/>
+<text x="380.0" y="92" font-size="13" fill="#1f2933" text-anchor="middle">:SUPPLIED_BY</text>
+<text x="380" y="128" font-size="13" fill="#52606d" text-anchor="middle" font-family="'Noto Sans Mono CJK JP','DejaVu Sans Mono',monospace">{since: 2021}</text>
+<text x="40" y="205" font-size="13" fill="#52606d" text-anchor="start">ノードにも辺にも、ラベルとプロパティを直接持たせる。</text>
+</svg>

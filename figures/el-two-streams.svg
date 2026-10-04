@@ -1,0 +1,45 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 760 376" width="760" height="376" role="img" aria-label="分析系と Web 標準系の順序と接近" font-family="'Noto Sans CJK JP','Hiragino Sans','Yu Gothic',sans-serif">
+<defs><marker id="a" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="8" markerHeight="8" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#52606d"/></marker></defs>
+<rect width="760" height="376" fill="#ffffff"/>
+<rect x="596" y="222" width="152" height="96" rx="8" fill="#f1ebf7" stroke="#7B4EA3" stroke-width="1" stroke-dasharray="4 4"/>
+<text x="748" y="338" font-size="12.5" fill="#7B4EA3" text-anchor="end" font-weight="700">約 10 か月に七つの出来事</text>
+<text x="20" y="115" font-size="14" fill="#009E73" text-anchor="start" font-weight="700">Web 標準系</text>
+<text x="20" y="255" font-size="14" fill="#7B4EA3" text-anchor="start" font-weight="700">分析系</text>
+<line x1="230" y1="110" x2="740" y2="110" stroke="#009E73" stroke-width="3"/>
+<line x1="150" y1="250" x2="740" y2="250" stroke="#7B4EA3" stroke-width="3"/>
+<circle cx="230" cy="110" r="6" fill="#ffffff" stroke="#009E73" stroke-width="2.5"/>
+<text x="230" y="94" font-size="12.5" fill="#1f2933" text-anchor="middle" font-weight="700">1999 年</text>
+<text x="230" y="76" font-size="12" fill="#52606d" text-anchor="middle">RDF</text>
+<circle cx="310" cy="110" r="6" fill="#ffffff" stroke="#009E73" stroke-width="2.5"/>
+<text x="310" y="94" font-size="12.5" fill="#1f2933" text-anchor="middle" font-weight="700">2004 年</text>
+<text x="310" y="76" font-size="12" fill="#52606d" text-anchor="middle">OWL</text>
+<circle cx="390" cy="110" r="6" fill="#ffffff" stroke="#009E73" stroke-width="2.5"/>
+<text x="390" y="94" font-size="12.5" fill="#1f2933" text-anchor="middle" font-weight="700">2009 年</text>
+<text x="390" y="76" font-size="12" fill="#52606d" text-anchor="middle">SKOS</text>
+<circle cx="470" cy="110" r="6" fill="#ffffff" stroke="#009E73" stroke-width="2.5"/>
+<text x="470" y="94" font-size="12.5" fill="#1f2933" text-anchor="middle" font-weight="700">2017 年</text>
+<text x="470" y="76" font-size="12" fill="#52606d" text-anchor="middle">SHACL</text>
+<circle cx="150" cy="250" r="6" fill="#ffffff" stroke="#7B4EA3" stroke-width="2.5"/>
+<text x="150" y="276" font-size="12.5" fill="#1f2933" text-anchor="middle" font-weight="700">1991 年</text>
+<text x="150" y="294" font-size="12" fill="#52606d" text-anchor="middle">Business Objects</text>
+<text x="150" y="310" font-size="12" fill="#52606d" text-anchor="middle">の特許</text>
+<circle cx="550" cy="250" r="6" fill="#ffffff" stroke="#7B4EA3" stroke-width="2.5"/>
+<text x="550" y="276" font-size="12.5" fill="#1f2933" text-anchor="middle" font-weight="700">2021 年</text>
+<text x="550" y="294" font-size="12" fill="#52606d" text-anchor="middle">指標の層</text>
+<text x="550" y="310" font-size="12" fill="#52606d" text-anchor="middle">の提唱</text>
+<circle cx="630" cy="250" r="6" fill="#ffffff" stroke="#7B4EA3" stroke-width="2.5"/>
+<text x="630" y="276" font-size="12.5" fill="#1f2933" text-anchor="middle" font-weight="700">2025 年</text>
+<text x="630" y="294" font-size="12" fill="#52606d" text-anchor="middle">OSI の発表</text>
+<circle cx="710" cy="250" r="6" fill="#ffffff" stroke="#7B4EA3" stroke-width="2.5"/>
+<text x="710" y="276" font-size="12.5" fill="#1f2933" text-anchor="middle" font-weight="700">2026 年</text>
+<text x="710" y="294" font-size="12" fill="#52606d" text-anchor="middle">Apache Ossie</text>
+<line x1="150" y1="238" x2="150" y2="110" stroke="#9aa5b1" stroke-width="1.2" stroke-dasharray="4 4"/>
+<line x1="150" y1="110" x2="220" y2="110" stroke="#9aa5b1" stroke-width="1.2" stroke-dasharray="4 4"/>
+<text x="158" y="134" font-size="12.5" fill="#1f2933" text-anchor="start">分析系の起点が先</text>
+<line x1="710" y1="240" x2="710" y2="122" stroke="#52606d" stroke-width="1.5" marker-end="url(#a)"/>
+<text x="700" y="176" font-size="12.5" fill="#1f2933" text-anchor="end">オントロジー仕様が</text>
+<text x="700" y="193" font-size="12.5" fill="#1f2933" text-anchor="end">RDF、OWL の語彙に関連づく</text>
+<text x="630" y="238" font-size="12.5" fill="#7B4EA3" text-anchor="end">2021 年以降の課題: 指標の定義をそろえる</text>
+<text x="162" y="238" font-size="12.5" fill="#7B4EA3" text-anchor="start">業務の言葉で問い合わせる</text>
+<text x="20" y="362" font-size="12" fill="#52606d" text-anchor="start">横軸は出来事の順序を示す。間隔は年数に比例しない。</text>
+</svg>

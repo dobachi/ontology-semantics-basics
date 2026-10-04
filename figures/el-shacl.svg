@@ -1,0 +1,25 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 760 240" width="760" height="240" role="img" aria-label="SHACL による検証の流れ" font-family="'Noto Sans CJK JP','Hiragino Sans','Yu Gothic',sans-serif">
+<defs><marker id="a" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="8" markerHeight="8" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#52606d"/></marker></defs>
+<rect width="760" height="240" fill="#ffffff"/>
+<rect x="30" y="30" width="220" height="70" rx="8" fill="#e6f5f0" stroke="#009E73" stroke-width="1.5"/>
+<text x="140.0" y="54" font-size="15" fill="#1f2933" text-anchor="middle" font-weight="700">データ（RDF）</text>
+<text x="140.0" y="76" font-size="13" fill="#52606d" text-anchor="middle">検査される側</text>
+<rect x="30" y="130" width="220" height="90" rx="8" fill="#e6f5f0" stroke="#009E73" stroke-width="1.5"/>
+<text x="140.0" y="154" font-size="15" fill="#1f2933" text-anchor="middle" font-weight="700">シェイプ（条件）</text>
+<text x="140.0" y="176" font-size="13" fill="#52606d" text-anchor="middle">名称は 1 つ以上</text>
+<text x="140.0" y="195" font-size="13" fill="#52606d" text-anchor="middle">供給者は 1 つ以上</text>
+<text x="140.0" y="214" font-size="13" fill="#52606d" text-anchor="middle">重量は 0 より大きい</text>
+<rect x="330" y="85" width="130" height="70" rx="8" fill="#f6f8fa" stroke="#9aa5b1" stroke-width="1.5"/>
+<text x="395.0" y="109" font-size="15" fill="#1f2933" text-anchor="middle" font-weight="700">検証</text>
+<rect x="540" y="30" width="190" height="70" rx="8" fill="#e6f5f0" stroke="#009E73" stroke-width="1.5"/>
+<text x="635.0" y="54" font-size="15" fill="#1f2933" text-anchor="middle" font-weight="700">適合</text>
+<text x="635.0" y="76" font-size="13" fill="#52606d" text-anchor="middle">条件をすべて満たす</text>
+<rect x="540" y="130" width="190" height="90" rx="8" fill="#fcefe6" stroke="#D55E00" stroke-width="1.5"/>
+<text x="635.0" y="154" font-size="15" fill="#1f2933" text-anchor="middle" font-weight="700">違反の報告</text>
+<text x="635.0" y="176" font-size="13" fill="#52606d" text-anchor="middle">どのデータが</text>
+<text x="635.0" y="195" font-size="13" fill="#52606d" text-anchor="middle">どの条件に反したか</text>
+<line x1="250" y1="65" x2="330" y2="105" stroke="#52606d" stroke-width="1.5" marker-end="url(#a)"/>
+<line x1="250" y1="175" x2="330" y2="135" stroke="#52606d" stroke-width="1.5" marker-end="url(#a)"/>
+<line x1="460" y1="105" x2="540" y2="65" stroke="#52606d" stroke-width="1.5" marker-end="url(#a)"/>
+<line x1="460" y1="135" x2="540" y2="175" stroke="#52606d" stroke-width="1.5" marker-end="url(#a)"/>
+</svg>

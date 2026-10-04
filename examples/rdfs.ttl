@@ -1,0 +1,10 @@
+@prefix ex:   <https://example.org/> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+
+ex:Part      a rdfs:Class ; rdfs:subClassOf ex:Product .
+ex:Supplier  a rdfs:Class ; rdfs:subClassOf ex:Organization .
+
+ex:suppliedBy  a <http://www.w3.org/1999/02/22-rdf-syntax-ns#Property> ;
+               rdfs:label   "供給者"@ja ;
+               rdfs:domain  ex:Part ;
+               rdfs:range   ex:Supplier .

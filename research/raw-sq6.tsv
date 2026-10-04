@@ -1,0 +1,16 @@
+url	title	span	note
+https://spec.edmcouncil.org/fibo/	FIBO (EDM Council)	The Financial Industry Business Ontology (FIBO) defines the sets of things that are of interest in financial business applications and the ways that those things can relate to one another.	T1
+https://spec.edmcouncil.org/fibo/	FIBO (EDM Council)	FIBO is developed as an ontology in the Web Ontology Language (OWL)	T1
+https://spec.edmcouncil.org/fibo/	FIBO (EDM Council)	It is also standardized by the Object Management Group (OMG).	T1
+https://geneontology.org/docs/ontology-documentation/	Gene Ontology documentation	The Gene Ontology (GO) is a structured, standardized representation of biological knowledge.	T1; founding year not found
+https://www.snomed.org/what-is-snomed-ct	What is SNOMED CT	Is the most comprehensive, multilingual clinical healthcare terminology in the world	T1
+https://www.snomed.org/what-is-snomed-ct	What is SNOMED CT	Released monthly, the SNOMED CT International Edition includes more than 360,000 concepts.	T1
+https://hl7.org/fhir/	HL7 FHIR Overview	FHIR is a standard for health care data exchange, published by HL7®.	T1; R5 generated Mar 26, 2023
+https://www.jip36-cfihos.org/	CFIHOS (JIP36)	CFIHOS' aim is to offer practical standardised specifications for information handover that work for: anyone involved in making, operating, maintaining or decommissioning industrial facilities	T1; JIP36 is managed by IOGP
+https://industrialdigitaltwin.org/en/	IDTA home	The most important tool in IDTA's work is the Asset Administration Shell (AAS), which represents each asset digitally.	T1
+https://industrialdigitaltwin.org/en/content-hub/aasspecifications	IDTA AAS Specifications	Specifications define the software structure, interface and semantics of the Asset Administration Shell and thus create the basis for the standardized Digital Twin.	T1
+https://eclass.eu/en/eclass-standard/introduction	ECLASS introduction	With ECLASS, product master data can be exchanged digitally across all borders – across sectors, countries, languages and organizations.	T1
+https://eclass.eu/en/eclass-standard/introduction	ECLASS introduction	The ECLASS Standard currently offers about 48,000 product classes and more than 23,000 unique properties.	T1
+https://oagi.org/pages/industrial-ontologies	Industrial Ontologies Foundry (OAGi)	The mission of the Industrial Ontologies Foundry is to create a set of core and open reference ontologies that spans the entire domain of digital manufacturing.	T1
+https://obofoundry.org/	OBO Foundry	Community development of interoperable ontologies for the biological sciences	T1
+https://imi.go.jp/	共通語彙基盤 (IMI)	データに用いる様々な用語の表記、意味、構造を統一し、分野を超えてデータの検索性向上やシステム連携強化を実現します。	T1

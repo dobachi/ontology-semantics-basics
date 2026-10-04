@@ -1,0 +1,21 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 760 295" width="760" height="295" role="img" aria-label="Apache Ossie による定義の交換" font-family="'Noto Sans CJK JP','Hiragino Sans','Yu Gothic',sans-serif">
+<defs><marker id="a" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="8" markerHeight="8" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#52606d"/></marker></defs>
+<rect width="760" height="295" fill="#ffffff"/>
+<rect x="270" y="90" width="220" height="90" rx="8" fill="#f1ebf7" stroke="#7B4EA3" stroke-width="1.5"/>
+<text x="380.0" y="114" font-size="15" fill="#1f2933" text-anchor="middle" font-weight="700">Ossie の文書</text>
+<text x="380.0" y="136" font-size="13" fill="#52606d" text-anchor="middle">YAML または JSON</text>
+<text x="380.0" y="155" font-size="13" fill="#52606d" text-anchor="middle">データセット、関係、指標</text>
+<rect x="30" y="30" width="180" height="50" rx="8" fill="#f6f8fa" stroke="#9aa5b1" stroke-width="1.5"/>
+<text x="120.0" y="54" font-size="14" fill="#1f2933" text-anchor="middle" font-weight="700">BI ツール A</text>
+<rect x="30" y="190" width="180" height="50" rx="8" fill="#f6f8fa" stroke="#9aa5b1" stroke-width="1.5"/>
+<text x="120.0" y="214" font-size="14" fill="#1f2933" text-anchor="middle" font-weight="700">BI ツール B</text>
+<rect x="550" y="30" width="180" height="50" rx="8" fill="#f6f8fa" stroke="#9aa5b1" stroke-width="1.5"/>
+<text x="640.0" y="54" font-size="14" fill="#1f2933" text-anchor="middle" font-weight="700">データ基盤</text>
+<rect x="550" y="190" width="180" height="50" rx="8" fill="#f6f8fa" stroke="#9aa5b1" stroke-width="1.5"/>
+<text x="640.0" y="214" font-size="14" fill="#1f2933" text-anchor="middle" font-weight="700">AI エージェント</text>
+<line x1="210" y1="62" x2="270" y2="105" stroke="#52606d" stroke-width="1.5" marker-end="url(#a)" marker-start="url(#a)"/>
+<line x1="210" y1="210" x2="270" y2="165" stroke="#52606d" stroke-width="1.5" marker-end="url(#a)" marker-start="url(#a)"/>
+<line x1="550" y1="62" x2="490" y2="105" stroke="#52606d" stroke-width="1.5" marker-end="url(#a)" marker-start="url(#a)"/>
+<line x1="550" y1="210" x2="490" y2="165" stroke="#52606d" stroke-width="1.5" marker-end="url(#a)" marker-start="url(#a)"/>
+<text x="380" y="278" font-size="13" fill="#52606d" text-anchor="middle">各ツールが独自形式で持つ定義を、共通の形式に書き出して受け渡す。</text>
+</svg>
