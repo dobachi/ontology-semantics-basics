@@ -1,7 +1,17 @@
 # オントロジー・セマンティクス・データモデル標準化の基礎調査
 
 オントロジー、セマンティクス、データモデル標準化の概念を、古典的な研究から近年の米国企業の取り組み（Open Semantic Interchange、現 Apache Ossie など）まで体系的に整理する調査である。
-初心者向け説明ペーパー（pptx）の土台とする。
+初心者向けの説明ペーパー（pptx）も含む。
+
+## 公開先
+
+| 内容 | URL |
+|---|---|
+| 調査報告 | <https://dobachi.github.io/ontology-semantics-basics/> |
+| 前提文書（調査の方法と検証の記録） | <https://dobachi.github.io/ontology-semantics-basics/method.html> |
+| リポジトリ | <https://github.com/dobachi/ontology-semantics-basics> |
+
+説明ペーパー（pptx）は、調査報告の冒頭のリンクからダウンロードできる。`main` に push すると、GitHub Actions が HTML を作り直して公開する（`.github/workflows/pages.yml`）。
 
 ## 状態
 
@@ -12,6 +22,8 @@
 - 2026-10-03: 初心者向けの説明ペーパー（`deck/ontology-semantics-intro.pptx`、29 枚）の第 1 版を作成。
 - 2026-10-04: 説明ペーパーを、調査報告の構成と図に合わせて作り直した（43 枚、8 部）。
 - 2026-10-04: 説明ペーパーを、独自テンプレートへの流し込みに切り替えた。見た目はスライドマスタが決める。pptx-build 2.7.0 以降が要る。
+- 2026-10-04: Open Knowledge Format を追加。課題から選ぶ木と四つの問いを追加。説明ペーパーは 48 枚。
+- 2026-10-04: 公開リポジトリ `dobachi/ontology-semantics-basics` に移し、GitHub Pages で公開した。
 
 ## 構成
 
