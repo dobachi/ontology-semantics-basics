@@ -4,7 +4,7 @@ PORT  ?= 4455
 PY    ?= python3
 CACHE := $(CURDIR)/.cache
 
-.PHONY: version assets html pdf preview preview-fresh preview-stop check-preview validate deck clean
+.PHONY: version release assets html pdf preview preview-fresh preview-stop check-preview validate deck clean
 
 # 生成物（図、技術要素の章）を作り直す
 assets:
@@ -23,7 +23,7 @@ html: assets
 PDF_BUILD := $(CURDIR)/.build-pdf
 pdf: assets
 	rm -rf $(PDF_BUILD) && mkdir -p $(PDF_BUILD) pdf
-	cp -r index.qmd method.qmd _elements.qmd _deck_download.qmd _quarto.yml _bib figures templates $(PDF_BUILD)/
+	cp -r index.qmd method.qmd _elements.qmd _deck_download.qmd _changelog.qmd _quarto.yml _bib figures templates $(PDF_BUILD)/
 	@# 図は先に PDF へ変換し、本文の参照も .pdf に書き換える。quarto に変換を任せると、
 	@# 図の 1 枚が不完全なファイルになってビルドが落ちることがあった
 	cd $(PDF_BUILD) && for f in figures/*.svg; do rsvg-convert -f pdf $$f -o $${f%.svg}.pdf || exit 1; done
@@ -63,6 +63,15 @@ PPTX_BUILD ?= $(HOME)/Sources/claude-skills-marketplace/plugins/pptx-build/skill
 version:
 	$(PY) scripts/apply_version.py $(V)
 	$(MAKE) deck PY=$(PY)
+
+# 版を公開する。改変履歴にその版の行があることを確かめ、タグを付けて push する。
+# タグが届くと、GitHub Actions がリリースを作り、その版の HTML と pptx を添える。
+release:
+	@test -z "$$(git status --porcelain)" || (echo "未コミットの変更がある。先にコミットすること"; exit 1)
+	@$(PY) scripts/release_notes.py >/dev/null
+	git push origin main
+	git tag -a v$$(cat VERSION) -m "$$(cat VERSION) 版"
+	git push origin v$$(cat VERSION)
 
 deck: assets
 	$(PY) deck/build_figures.py

@@ -21,7 +21,18 @@
 make version V=2026-11-01 PY=<python>   # VERSION を書き換え、文書とスライドに反映する
 ```
 
-版は次の場所に出る。調査報告と前提文書の題名の下、調査報告の冒頭の囲み、スライドの表紙、ダウンロードする pptx のファイル名（`ontology-semantics-intro-<版>.pptx`）。公開した版には、同じ名前の Git のタグ（`v<版>`）を付け、GitHub のリリースに pptx を添える。
+版は次の場所に出る。調査報告と前提文書の題名の下、調査報告の冒頭の囲み、スライドの表紙、ダウンロードする pptx のファイル名（`ontology-semantics-intro-<版>.pptx`）。公開した版には、同じ名前の Git のタグ（`v<版>`）を付ける。タグを push すると、GitHub Actions がリリースを作り、その版の調査報告と前提文書の HTML、説明ペーパーの pptx を添える（`.github/workflows/release.yml`）。
+
+版を出す手順は次のとおりである。
+
+```bash
+make version V=2026-11-01 PY=<python>   # 版を反映する
+# _changelog.qmd の先頭に、その版の行を足す（調査報告の末尾の「改変履歴」になる）
+git commit -am "..."                    # コミットする
+make release PY=<python>                # タグを付けて push する。リリースは自動で作られる
+```
+
+改変履歴にその版の行がないと、`make release` は止まる。
 
 `main` に push すると、GitHub Actions が HTML を作り直して公開する（`.github/workflows/pages.yml`）。
 

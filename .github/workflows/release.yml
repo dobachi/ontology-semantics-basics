@@ -1,0 +1,50 @@
+# 版のタグ（v<版>）が push されたら、その版のリリースを作る。
+# 添付するのは、その版の調査報告と前提文書の HTML、説明ペーパーの pptx である。
+# 説明文は、改変履歴（_changelog.qmd）のその版の行から作る。
+name: Release
+
+on:
+  push:
+    tags: ["v*"]
+  workflow_dispatch:
+    inputs:
+      tag:
+        description: "作り直すリリースのタグ（例: v2026-10-04）"
+        required: true
+
+permissions:
+  contents: write
+
+jobs:
+  release:
+    runs-on: ubuntu-latest
+    env:
+      TAG: ${{ github.event.inputs.tag || github.ref_name }}
+      GH_TOKEN: ${{ github.token }}
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: ${{ env.TAG }}
+      - uses: quarto-dev/quarto-actions/setup@v2
+      - name: Check that the tag matches VERSION
+        run: test "v$(cat VERSION)" = "$TAG"
+      - name: Build
+        run: |
+          python3 scripts/build_deck_link.py
+          quarto render --to html
+      - name: Collect the versioned files
+        run: |
+          V=$(cat VERSION); mkdir dist
+          cp _output/index.html  "dist/ontology-semantics-basics-$V.html"
+          cp _output/method.html "dist/ontology-semantics-basics-method-$V.html"
+          cp deck/ontology-semantics-intro.pptx "dist/ontology-semantics-intro-$V.pptx"
+          python3 scripts/release_notes.py > notes.md
+      - name: Create or update the release
+        run: |
+          V=$(cat VERSION)
+          if gh release view "$TAG" >/dev/null 2>&1; then
+            gh release edit "$TAG" --title "$V 版" --notes-file notes.md
+            gh release upload "$TAG" dist/* --clobber
+          else
+            gh release create "$TAG" --title "$V 版" --notes-file notes.md dist/*
+          fi
