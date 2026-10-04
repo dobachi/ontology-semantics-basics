@@ -3,7 +3,7 @@ title: "オントロジー・セマンティクス・データモデル標準化
 subtitle: "古典的な研究の系譜から Open Semantic Interchange（Apache Ossie）まで"
 author: "dobachi"
 date: "2026-10-04"
-version: "2026-10-04.4"
+version: "2026-10-04.5"
 ---
 
 ::: {.callout-note}

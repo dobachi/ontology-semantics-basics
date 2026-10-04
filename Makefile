@@ -23,7 +23,7 @@ html: assets
 PDF_BUILD := $(CURDIR)/.build-pdf
 pdf: assets
 	rm -rf $(PDF_BUILD) && mkdir -p $(PDF_BUILD) pdf
-	cp -r index.qmd method.qmd _elements.qmd _deck_download.qmd _changelog.qmd _quarto.yml _bib figures templates $(PDF_BUILD)/
+	cp -r index.qmd method.qmd _elements.qmd _deck_download.qmd _method_download.qmd _changelog.qmd _quarto.yml _bib figures templates $(PDF_BUILD)/
 	@# 図は先に PDF へ変換し、本文の参照も .pdf に書き換える。quarto に変換を任せると、
 	@# 図の 1 枚が不完全なファイルになってビルドが落ちることがあった
 	@# 図の文字は輪郭に変える（gs -dNoOutputFonts）。そのままだと図ごとに書体が埋め込まれ、

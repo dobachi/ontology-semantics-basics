@@ -9,11 +9,10 @@
 |---|---|
 | 調査報告 | <https://dobachi.github.io/ontology-semantics-basics/> |
 | 前提文書（調査の方法と検証の記録） | <https://dobachi.github.io/ontology-semantics-basics/method.html> |
-| 調査報告の PDF | <https://dobachi.github.io/ontology-semantics-basics/index.pdf> |
-| 前提文書の PDF | <https://dobachi.github.io/ontology-semantics-basics/method.pdf> |
+| PDF と説明ペーパー（版ごと） | <https://github.com/dobachi/ontology-semantics-basics/releases/latest> |
 | リポジトリ | <https://github.com/dobachi/ontology-semantics-basics> |
 
-説明ペーパー（pptx）は、調査報告の冒頭のリンクからダウンロードできる。ファイル名に版が入る。
+PDF と説明ペーパー（pptx）は、調査報告と前提文書の冒頭のリンクからダウンロードできる。どちらもファイル名に版が入る（`ontology-semantics-basics-<版>.pdf` など）。
 
 ## 版
 

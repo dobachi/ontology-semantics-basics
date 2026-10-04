@@ -36,8 +36,9 @@ jobs:
         run: quarto render --to html
       - name: Put the PDFs where the HTML links to them
         run: |
-          cp pdf/ontology-semantics-basics.pdf _output/index.pdf
-          cp pdf/ontology-semantics-basics-method.pdf _output/method.pdf
+          V=$(cat VERSION)
+          cp pdf/ontology-semantics-basics.pdf "_output/ontology-semantics-basics-$V.pdf"
+          cp pdf/ontology-semantics-basics-method.pdf "_output/ontology-semantics-basics-method-$V.pdf"
       - uses: actions/upload-pages-artifact@v3
         with:
           path: _output

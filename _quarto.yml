@@ -17,6 +17,8 @@ format:
     number-sections: true
     theme: cosmo
     embed-resources: true
+    # 「他の形式」の自動リンクは index.pdf を指す。版の入ったファイル名へのリンクを自前で出すので、止める
+    format-links: false
     tbl-cap-location: top
     fig-cap-location: bottom
 
